@@ -5,6 +5,11 @@ const SpecOffers = styled.section`
   background: linear-gradient(162.96deg, #00b0de 41.41%, #196ebd 141.41%);
 `;
 
+const Card = styled.div`
+  background-color: #ffffff;
+  margin-top: 1rem;
+`;
+
 export default function() {
   return (
     <SpecOffers>
@@ -16,13 +21,37 @@ export default function() {
         </div>
         <div className="row">
           <div className="col-xs-12">
-            <p>Билеты от 499 рублей!</p>
+            <Card>
+              <div>Билеты от 499 рублей!</div>
+              <div>Логотипи Цена</div>
+              <p>
+                Билеты от 499 рублей! Специальное предложение от авиакомпании
+                Победа
+              </p>
+              <button>Узнать подробности</button>
+            </Card>
           </div>
           <div className="col-xs-12">
-            <p>два</p>
+            <Card>
+              <div>Билеты от 499 рублей!</div>
+              <div>Логотипи Цена</div>
+              <p>
+                Билеты от 499 рублей! Специальное предложение от авиакомпании
+                Победа
+              </p>
+              <button>Узнать подробности</button>
+            </Card>
           </div>
           <div className="col-xs-12">
-            <p>три</p>
+            <Card>
+              <div>Билеты от 499 рублей!</div>
+              <div>Логотипи Цена</div>
+              <p>
+                Билеты от 499 рублей! Специальное предложение от авиакомпании
+                Победа
+              </p>
+              <button>Узнать подробности</button>
+            </Card>
           </div>
         </div>
         <div className="row">

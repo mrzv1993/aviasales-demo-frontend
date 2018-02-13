@@ -5,6 +5,8 @@ import PopularWays from "./PopularWays/index";
 import BestPrice from "./BestPrice";
 import SpecOffers from "./SpecOffers";
 import MainArticles from "./MainArticles";
+import DownloadApp from "./DownloadApp";
+import Footer from "./Footer/index";
 
 class App extends Component {
   render() {
@@ -15,6 +17,8 @@ class App extends Component {
         <BestPrice />
         <SpecOffers />
         <MainArticles />
+        <DownloadApp />
+        <Footer />
       </div>
     );
   }

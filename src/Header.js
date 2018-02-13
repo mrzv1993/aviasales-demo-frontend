@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import logo from "./assets/logo.svg";
-import calendar from "./assets/calendar.svg";
 
 const Header = styled.header`
   background: linear-gradient(148.48deg, #079dd4 22.46%, #196ebd 122.26%);
 `;
 
 const Logo = styled.img`
-  padding: 0.75rem 0;
-`;
-
-const Calendar = styled.img`
   padding: 0.75rem 0;
 `;
 
@@ -99,38 +94,16 @@ export default function() {
   return (
     <Header>
       <div className="container">
-        <div className="row">
-          <div className="col-xs-12">
-            <Logo src={logo} alt="Aviasales" title="Aviasales" />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-12">
-            <Title>Поиск дешевых авиабилетов</Title>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-12">
-            <DepartInput placeholder="Город вылета" value="Владивосток" />
-          </div>
-          <div className="col-xs-12">
-            <ComingInput placeholder="Город прибытия" />
-          </div>
-          <div className="col-xs-12">
-            <HeaderButtons>
-              <DepartButton>Туда</DepartButton>
-              <ReturnButton>Обратно</ReturnButton>
-            </HeaderButtons>
-          </div>
-          <div className="col-xs-12">
-            <PassengerButton>1 пассажир, эконом</PassengerButton>
-          </div>
-        </div>
-        <div className="row center-xs">
-          <div className="col-xs-12">
-            <SearchButton>Найти билеты</SearchButton>
-          </div>
-        </div>
+        <Logo src={logo} alt="Aviasales" title="Aviasales" />
+        <Title>Поиск дешевых авиабилетов</Title>
+        <DepartInput placeholder="Город вылета" value="Владивосток" />
+        <ComingInput placeholder="Город прибытия" />
+        <HeaderButtons>
+          <DepartButton>Туда</DepartButton>
+          <ReturnButton>Обратно</ReturnButton>
+        </HeaderButtons>
+        <PassengerButton>1 пассажир, эконом</PassengerButton>
+        <SearchButton>Найти билеты</SearchButton>
       </div>
     </Header>
   );
