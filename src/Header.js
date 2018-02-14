@@ -88,6 +88,10 @@ const SearchButton = styled.button`
   margin-bottom: 5.5rem;
   margin-top: 1rem;
   width: 100%;
+
+  &:hover {
+    background: #d97d38;
+  }
 `;
 
 export default function() {

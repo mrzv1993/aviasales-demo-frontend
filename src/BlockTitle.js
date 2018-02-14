@@ -13,6 +13,7 @@ const BlockTitle = styled.div`
   text-align: center;
 
   color: #4a4a4a;
+  margin-bottom: 2rem;
 `;
 
 const Label = styled.div`
