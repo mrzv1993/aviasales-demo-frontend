@@ -6,7 +6,7 @@ import Form from "./Form/";
 import logo from "../assets/logo.svg";
 import aero from "./aero.svg";
 
-const Layout = styled.header`
+const Wrapper = styled.header`
   background: linear-gradient(148.48deg, #079dd4 22.46%, #196ebd 122.26%);
   height: 100vh;
 `;
@@ -111,7 +111,7 @@ const Span = styled.span`
 
 export default function() {
   return (
-    <Layout>
+    <Wrapper>
       <div className="container">
         <Header>
           <LogoImg src={logo} alt="Aviasales" title="Aviasales" />
@@ -121,14 +121,18 @@ export default function() {
           <div>
             <H1>Поиск дешевых авиабилетов</H1>
             <H2>Лучший способ купить авиабилеты дешево</H2>
-            <Form />
-            <Button>
-              <Span>Найти билеты</Span>
-              <img src={aero} alt="" />
-            </Button>
+            <div className="row">
+              <div className="col-md-10 col-md-offset-1">
+                <Form />
+                <Button>
+                  <Span>Найти билеты</Span>
+                  <img src={aero} alt="" />
+                </Button>
+              </div>
+            </div>
           </div>
         </FormWrap>
       </div>
-    </Layout>
+    </Wrapper>
   );
 }
