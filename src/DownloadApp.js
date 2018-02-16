@@ -9,7 +9,7 @@ const DownloadApp = styled.section`
   background: linear-gradient(137.4deg, #00b0de 4.18%, #196ebd 104.18%);
 `;
 
-const H2 = styled.h2`
+const Title = styled.h2`
   font-weight: 500;
   line-height: normal;
   font-size: 24px;
@@ -34,9 +34,10 @@ const RateStars = styled.ul`
   display: flex;
   list-style: none;
   margin-right: 0.5rem;
-  > li {
-    margin-right: 0.25rem;
-  }
+`;
+
+const RateListItem = styled.li`
+  margin-right: 0.25rem;
 `;
 
 const Star = styled.img`
@@ -63,11 +64,11 @@ const Mockup = styled.div`
 const Link = styled.ul`
   color: #ffffff;
   list-style: none;
+`;
 
-  > li {
-    padding: 0.5rem 0;
-    font-size: 14px;
-  }
+const MarketListItem = styled.li`
+  padding: 0.5rem 0;
+  font-size: 14px;
 `;
 
 export default function() {
@@ -75,32 +76,32 @@ export default function() {
     <DownloadApp>
       <Mockup />
       <div className="container">
-        <H2>Скачай мобильное приложение Aviasales.ru</H2>
+        <Title>Скачай мобильное приложение Aviasales.ru</Title>
         <Rate>
           <RateStars>
-            <li>
+            <RateListItem>
               <Star src={star} alt="Aviasales" title="Aviasales" />
-            </li>
-            <li>
+            </RateListItem>
+            <RateListItem>
               <Star src={star} alt="Aviasales" title="Aviasales" />
-            </li>
-            <li>
+            </RateListItem>
+            <RateListItem>
               <Star src={star} alt="Aviasales" title="Aviasales" />
-            </li>
-            <li>
+            </RateListItem>
+            <RateListItem>
               <Star src={star} alt="Aviasales" title="Aviasales" />
-            </li>
-            <li>
+            </RateListItem>
+            <RateListItem>
               <HalfStar src={halfStar} alt="Aviasales" title="Aviasales" />
-            </li>
+            </RateListItem>
           </RateStars>
           <p>Более 103 000 оценок</p>
         </Rate>
         <Market>
           <Link>
-            <li>iPhone или iPad</li>
-            <li>Android</li>
-            <li>Windows Phone</li>
+            <MarketListItem>iPhone или iPad</MarketListItem>
+            <MarketListItem>Android</MarketListItem>
+            <MarketListItem>Windows Phone</MarketListItem>
           </Link>
         </Market>
       </div>

@@ -4,7 +4,6 @@ import Header from "./Header";
 import PopularWays from "./PopularWays";
 import BestPrice from "./BestPrice";
 import Slider from "./Slider";
-import Subscribe from "./Subscribe";
 import SpecOffers from "./SpecOffers";
 import MainArticles from "./MainArticles";
 import DownloadApp from "./DownloadApp";
@@ -22,7 +21,6 @@ class App extends Component {
         <PopularWays />
         <BestPrice />
         <Slider />
-        <Subscribe />
         <SpecOffers />
         <MainArticles />
         <DownloadApp />

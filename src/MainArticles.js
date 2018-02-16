@@ -5,7 +5,7 @@ const MainArticles = styled.section`
   background: #ffffff;
 `;
 
-const H3 = styled.h3`
+const Title = styled.h3`
   font-weight: bold;
   line-height: 18px;
   font-size: 13px;
@@ -13,21 +13,21 @@ const H3 = styled.h3`
   color: #4a4a4a;
 `;
 
-const P = styled.p`
+const Article = styled.p`
   font-weight: normal;
   line-height: 20px;
   font-size: 14px;
 
   color: #4a4a4a;
+`;
 
-  > a {
-    font-weight: normal;
-    line-height: 20px;
-    font-size: 14px;
+const Link = styled.a`
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
 
-    color: #00ace2;
-    text-decoration: none;
-  }
+  color: #00ace2;
+  text-decoration: none;
 `;
 
 export default function() {
@@ -36,8 +36,8 @@ export default function() {
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
-            <H3>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</H3>
-            <P>
+            <Title>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Title>
+            <Article>
               Aviasales.ru — это метапоисковик авиабилетов. Мы ищем билеты на
               самолет по сотням авиакомпаний и находим за считанные минуты самые
               дешевые авиабилеты. Чтобы купить авиабилет дешево, воспользуйтесь
@@ -48,12 +48,12 @@ export default function() {
               дешевые билеты на самолет в Европу, Азию и на другие континенты.
               Мы написали для вас простую инструкцию о том, как пользоваться
               поиском и экономить на перелетах от 1000 до 20 000 руб в год.{" "}
-              <a href="#">Подробнее</a>
-            </P>
+              <Link href="#">Подробнее</Link>
+            </Article>
           </div>
           <div className="col-xs-12">
-            <H3>ЭЛЕКТРОННЫЙ АВИАБИЛЕТ</H3>
-            <P>
+            <Title>ЭЛЕКТРОННЫЙ АВИАБИЛЕТ</Title>
+            <Article>
               Электронный авиабилет — это, по сути, обычный билет на самолет, но
               только в менее привычном для путешественника виде. Вся информация
               об авиаперелете (данные пассажира, маршрут следования) хранится в
@@ -67,18 +67,19 @@ export default function() {
               вместе с удостоверением личности точно так же, как предъявляют
               обыкновенный бумажный билет. Следует отметить, что электронный
               билет, приобретенный онлайн, стоит дешевле своего бумажного
-              аналога. <a href="#">Подробнее</a>
-            </P>
+              аналога. <Link href="#">Подробнее</Link>
+            </Article>
           </div>
           <div className="col-xs-12">
-            <H3>20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ</H3>
-            <P>
+            <Title>20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ</Title>
+            <Article>
               Есть масса путеводителей по странам, но ни одного о том, как
               провести время в самолете. Для того, чтобы сделать ваш перелет
               максимально комфортным, мы написали 20 советов о подготовке к
               путешествию. Ведь настоящее путешествие начинается со слов «Добро
-              пожаловать на борт нашего самолета»! <a href="#">Подробнее</a>
-            </P>
+              пожаловать на борт нашего самолета»!{" "}
+              <Link href="#">Подробнее</Link>
+            </Article>
           </div>
         </div>
       </div>

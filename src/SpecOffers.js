@@ -12,7 +12,7 @@ const OferLogo = styled.img`
   margin-left: 1rem;
 `;
 
-const H2 = styled.h2`
+const Title = styled.h2`
   margin-top: 1rem;
   font-style: normal;
   font-weight: 500;
@@ -46,33 +46,34 @@ const Info = styled.div`
   align-items: center;
 `;
 
-const Price = styled.div`
+const PriceWrapper = styled.div`
   margin-right: 1rem;
   margin-top: 1rem;
+`;
 
-  > p {
-    font-style: normal;
-    font-weight: normal;
-    line-height: 16px;
-    font-size: 20px;
-    text-align: right;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 0.5rem;
+const Price = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  line-height: 16px;
+  font-size: 20px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5rem;
 
-    color: #5c5c5c;
-  }
-  > span {
-    font-style: normal;
-    font-weight: normal;
-    line-height: 15px;
-    font-size: 12px;
-    text-align: right;
-    margin: 0;
-    padding: 0;
+  color: #5c5c5c;
+`;
 
-    color: #d93633;
-  }
+const Days = styled.span`
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
+  font-size: 12px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+
+  color: #d93633;
 `;
 
 const Description = styled.p`
@@ -106,28 +107,29 @@ const Button = styled.button`
 const Note = styled.div`
   text-align: center;
   padding: 2rem 0 1.5rem 0;
+`;
 
-  > a {
-    font-size: 16px;
-    text-decoration-line: underline;
-    color: #ffffff;
-  }
-  > span {
-    display: inline-block;
-    padding-top: 0.5rem;
-    line-height: 20px;
-    font-size: 16px;
-    text-align: center;
+const ShowAll = styled.a`
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #ffffff;
+`;
 
-    color: #ffffff;
-  }
+const Footnote = styled.span`
+  display: inline-block;
+  padding-top: 0.5rem;
+  line-height: 20px;
+  font-size: 16px;
+  text-align: center;
+
+  color: #ffffff;
 `;
 
 export default function() {
   return (
     <SpecOffers>
       <div className="container">
-        <H2>Спецпредложения на авиабилеты</H2>
+        <Title>Спецпредложения на авиабилеты</Title>
         <div className="row">
           <div className="col-xs-12 col-md-4">
             <Card>
@@ -136,10 +138,10 @@ export default function() {
               </Header>
               <Info>
                 <OferLogo src={oferLogo} alt="Aviasales" title="Aviasales" />
-                <Price>
-                  <p>от 499 ₽</p>
+                <PriceWrapper>
+                  <Price>от 499 ₽</Price>
                   <span>Осталось 45 дней</span>
-                </Price>
+                </PriceWrapper>
               </Info>
               <Description>
                 Билеты от 499 рублей! Специальное предложение от авиакомпании
@@ -155,10 +157,10 @@ export default function() {
               </Header>
               <Info>
                 <OferLogo src={oferLogo} alt="Aviasales" title="Aviasales" />
-                <Price>
-                  <p>от 499 ₽</p>
+                <PriceWrapper>
+                  <Price>от 499 ₽</Price>
                   <span>Осталось 45 дней</span>
-                </Price>
+                </PriceWrapper>
               </Info>
               <Description>
                 Билеты от 499 рублей! Специальное предложение от авиакомпании
@@ -174,10 +176,10 @@ export default function() {
               </Header>
               <Info>
                 <OferLogo src={oferLogo} alt="Aviasales" title="Aviasales" />
-                <Price>
-                  <p>от 499 ₽</p>
+                <PriceWrapper>
+                  <Price>от 499 ₽</Price>
                   <span>Осталось 45 дней</span>
-                </Price>
+                </PriceWrapper>
               </Info>
               <Description>
                 Билеты от 499 рублей! Специальное предложение от авиакомпании
@@ -188,9 +190,9 @@ export default function() {
           </div>
         </div>
         <Note>
-          <a href="#">Смотреть все спецпредложения</a>
+          <ShowAll href="#">Смотреть все спецпредложения</ShowAll>
           <br />
-          <span>* средняя цена по направлению</span>
+          <Footnote>* средняя цена по направлению</Footnote>
         </Note>
       </div>
     </SpecOffers>
