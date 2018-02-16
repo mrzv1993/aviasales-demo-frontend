@@ -41,7 +41,7 @@ export default function() {
   return (
     <Category>
       <div className="row">
-        <div className="col-xs-12 col-md-6 col-lg-4">
+        <div className="col-xs-12 col-md-6 col-xl-4">
           <ListWrap>
             <List>
               <Title>СТРАНЫ</Title>
@@ -93,7 +93,7 @@ export default function() {
             </List>
           </ListWrap>
         </div>
-        <div className="col-xs-12 col-md-6 col-lg-4">
+        <div className="col-xs-12 col-md-6 col-xl-4">
           <ListWrap>
             <List>
               <Title>АВИАКОМПАНИИ</Title>
@@ -145,7 +145,7 @@ export default function() {
             </List>
           </ListWrap>
         </div>
-        <div className="col-xs-12 col-md-6 col-lg-4">
+        <div className="col-xs-12 col-md-6 col-xl-4">
           <ListWrap>
             <List>
               <Title>НАПРАВЛЕНИ</Title>

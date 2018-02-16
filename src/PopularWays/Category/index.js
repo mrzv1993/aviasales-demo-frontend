@@ -9,6 +9,11 @@ import shopping from "./06-shopping.svg";
 
 const Wrapper = styled.div`
   width: 100%;
+  margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    margin-top: 2.5rem;
+  }
 `;
 
 const Nav = styled.div`
@@ -21,7 +26,7 @@ const Nav = styled.div`
   }
 
   &:last-child {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 `;
 
@@ -31,11 +36,11 @@ const Tab = styled.div`
   justify-content: center;
 `;
 
-const CategotyButton = styled.button`
+const Button = styled.button`
   background: transparent;
   border: none;
   padding: 8px;
-  padding-top: 64px;
+  padding-top: 56px;
   font-size: 0.75rem;
   line-height: 1rem;
   text-align: center;
@@ -66,7 +71,7 @@ const CategotyButton = styled.button`
   }
 `;
 
-const CategotyAll = CategotyButton.extend`
+const All = Button.extend`
   border-bottom: 1px solid #00ace2;
   color: #5c5c5c;
   &:after {
@@ -75,31 +80,31 @@ const CategotyAll = CategotyButton.extend`
   }
 `;
 
-const CategotyBeach = CategotyButton.extend`
+const Beach = Button.extend`
   &:after {
     background-image: url(${beach});
   }
 `;
 
-const CategotyFamily = CategotyButton.extend`
+const Family = Button.extend`
   &:after {
     background-image: url(${family});
   }
 `;
 
-const CategotyHistory = CategotyButton.extend`
+const History = Button.extend`
   &:after {
     background-image: url(${history});
   }
 `;
 
-const CategotyNightlife = CategotyButton.extend`
+const Nightlife = Button.extend`
   &:after {
     background-image: url(${nightlife});
   }
 `;
 
-const CategotyShopping = CategotyButton.extend`
+const Shopping = Button.extend`
   &:after {
     background-image: url(${shopping});
   }
@@ -110,36 +115,36 @@ export default function() {
     <Wrapper>
       <Nav>
         <Tab>
-          <CategotyAll>
+          <All>
             КУДА<br />УГОДНО
-          </CategotyAll>
+          </All>
         </Tab>
         <Tab>
-          <CategotyBeach>
+          <Beach>
             Солнце<br />и море
-          </CategotyBeach>
+          </Beach>
         </Tab>
         <Tab>
-          <CategotyFamily>
+          <Family>
             Шопинг,<br />город
-          </CategotyFamily>
+          </Family>
         </Tab>
       </Nav>
       <Nav>
         <Tab>
-          <CategotyHistory>
+          <History>
             Культура<br />и история
-          </CategotyHistory>
+          </History>
         </Tab>
         <Tab>
-          <CategotyNightlife>
+          <Nightlife>
             Ночная<br />жизнь
-          </CategotyNightlife>
+          </Nightlife>
         </Tab>
         <Tab>
-          <CategotyShopping>
+          <Shopping>
             Отдых<br />с детьми
-          </CategotyShopping>
+          </Shopping>
         </Tab>
       </Nav>
     </Wrapper>

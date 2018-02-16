@@ -3,23 +3,31 @@ import styled from "styled-components";
 import Header from "./Header";
 import PopularWays from "./PopularWays";
 import BestPrice from "./BestPrice";
+import Slider from "./Slider";
+import Subscribe from "./Subscribe";
 import SpecOffers from "./SpecOffers";
 import MainArticles from "./MainArticles";
 import DownloadApp from "./DownloadApp";
 import Footer from "./Footer";
 
+const MainWrapper = styled.div`
+  min-width: 320px;
+`;
+
 class App extends Component {
   render() {
     return (
-      <div>
+      <MainWrapper>
         <Header />
         <PopularWays />
         <BestPrice />
+        <Slider />
+        <Subscribe />
         <SpecOffers />
         <MainArticles />
         <DownloadApp />
         <Footer />
-      </div>
+      </MainWrapper>
     );
   }
 }

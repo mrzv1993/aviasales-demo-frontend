@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+
+import CityCountry from "./CityCountry";
+
 import barca from "./barca@1x.jpg";
 import barca2x from "./barca@2x.jpg";
+import flagRu from "./flag-ru.svg";
 
 const Link = styled.a`
   text-decoration: none;
@@ -11,89 +15,95 @@ const Card = styled.div`
   background: #ffffff;
   box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12);
   border-radius: 8px;
-  overflow: hidden;
   margin-top: 1rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
 `;
 
-const CardCover = styled.img`
+const Img = styled.img`
   width: 100%;
   background-size: cover;
-  height: 128px;
+  display: block;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 `;
 
-const CardData = styled.div`
-  padding-top: 1rem;
-  margin: 0 1rem;
+const DescriptionWrapper = styled.div`
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-
-  > h3 {
-    margin: 0;
-  }
-
-  > p {
-    margin: 0.75rem 0;
-  }
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 0;
 `;
 
-const City = styled.h3`
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-
-  color: #5b5b5c;
-  width: 50%;
+const Description = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 1rem;
 `;
 
-const Price = styled.span`
-  font-family: Roboto;
-  font-style: normal;
+const PriceDate = styled.div`
+  min-width: 128px;
+`;
+
+const Price = styled.h3`
+  margin: 0;
+  padding-bottom: 0.25rem;
   font-weight: normal;
-  font-size: 14px;
+  line-height: 1rem;
+  font-size: 0.875rem;
   text-align: right;
 
   color: #00bae8;
-  width: 50%;
 `;
 
-const Country = styled.p`
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  width: 50%;
-
-  color: #a0b0b9;
-`;
 const Date = styled.p`
-  font-family: Roboto;
-  font-style: normal;
+  margin: 0;
   font-weight: 500;
-
-  font-size: 12px;
+  line-height: 1rem;
+  font-size: 0.75rem;
   text-align: right;
 
   color: #a0b0b9;
-  width: 50%;
+`;
+
+const Flag = styled.img`
+  width: 32px;
+  height: 32px;
+  margin-left: 1rem;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    display: none;
+  }
 `;
 
 export default function() {
   return (
     <Link href="#">
       <Card>
-        <CardCover
-          src={barca}
-          srcset={barca2x}
-          alt="Aviasales"
-          title="Aviasales"
-        />
-        <CardData>
-          <City>Краснодар</City>
-          <Price>Найти от 1 212 ₽ </Price>
-          <Country>Россия </Country>
-          <Date>18 марта </Date>
-        </CardData>
+        <picture>
+          <source
+            media="(max-width: 575px)"
+            srcSet={barca + " , " + barca2x + "2x"}
+          />
+          <source
+            media="(mшт-width: 576px)"
+            srcSet={barca + " , " + barca2x + "2x"}
+          />
+          <Img src={barca} srcSet={barca2x} alt="asdasd" />
+        </picture>
+        <DescriptionWrapper>
+          <Flag src={flagRu} alt="Россия" />
+          <Description>
+            <CityCountry />
+            <PriceDate>
+              <Price>Найти от 2 407 ₽</Price>
+              <Date>18 марта</Date>
+            </PriceDate>
+          </Description>
+        </DescriptionWrapper>
       </Card>
     </Link>
   );

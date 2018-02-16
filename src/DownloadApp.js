@@ -5,6 +5,7 @@ import star from "./assets/star.svg";
 import halfStar from "./assets/half-star.svg";
 
 const DownloadApp = styled.section`
+  position: relative;
   background: linear-gradient(137.4deg, #00b0de 4.18%, #196ebd 104.18%);
 `;
 
@@ -53,7 +54,10 @@ const Market = styled.div`
 const Mockup = styled.div`
   background-image: url(${mockup});
   background-repeat: no-repeat;
+  background-size: 96px;
   width: 50%;
+  position: absolute;
+  botton: 0;
 `;
 
 const Link = styled.ul`
@@ -69,6 +73,7 @@ const Link = styled.ul`
 export default function() {
   return (
     <DownloadApp>
+      <Mockup />
       <div className="container">
         <H2>Скачай мобильное приложение Aviasales.ru</H2>
         <Rate>
@@ -92,7 +97,6 @@ export default function() {
           <p>Более 103 000 оценок</p>
         </Rate>
         <Market>
-          <Mockup />
           <Link>
             <li>iPhone или iPad</li>
             <li>Android</li>
