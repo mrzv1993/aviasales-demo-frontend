@@ -1,41 +1,63 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const Category = styled.section`
+const FooterLinks = styled.section`
   border-bottom: 1px solid #e0e6e8;
 `;
 
-const ListWrap = styled.div`
+const ListLink = styled.div`
   display: flex;
-  justify-content: space-between;
 `;
 
-const Title = styled.li`
+const Country = styled.nav`
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+`;
+
+const City = styled.nav`
+  display: flex;
+`;
+
+const Title = styled.h3`
   font-weight: 500;
-  line-height: 16px;
-  font-size: 12px;
-  margin-bottom: 1rem;
+  line-height: 1rem;
+  font-size: 0.75rem;
 
   color: #4a4a4a;
 `;
 
-const List = styled.ul`
-  list-style: none;
-  width: 50%;
-  margin-top: 2rem;
-
-  > li > a {
-    display: inline-block;
-    line-height: 16px;
-    font-size: 12px;
-    text-decoration: none;
-
-    color: #5b5b5c;
-    padding: 0.5rem 0;
-  }
-`;
-
 const LastLink = styled.a``;
+
+export default function() {
+  return (
+    <FooterLinks>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12">
+            <div className="row">
+              <div className="col-xs-12">
+                <ListLink>
+                  <Country>
+                    <Title>СТРАНЫ</Title>
+                    <a href="#">Россия</a>
+                    <a href="#">Россия</a>
+                    <a href="#">Россия</a>
+                    <a href="#">Россия</a>
+                  </Country>
+                  <City />
+                </ListLink>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </FooterLinks>
+  );
+}
+
+{
+  /*
 
 export default function() {
   return (
@@ -197,4 +219,7 @@ export default function() {
       </div>
     </Category>
   );
+}
+
+*/
 }
