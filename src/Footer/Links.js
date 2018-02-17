@@ -6,19 +6,33 @@ const Nav = styled.nav`
   display: block;
   width: 100%;
   margin-top: 1rem;
-
-  > a {
-    line-height: 16px;
-    font-size: 12px;
-
-    color: #5b5b5c;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.5rem;
-  }
 `;
 
-const P = styled.p`
+const ListFooterLink = styled.div`
+  display: flex;
+`;
+
+const Link = styled.a`
+  line-height: 16px;
+  font-size: 12px;
+
+  color: #5b5b5c;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem;
+`;
+
+const StoreCopyright = styled.div`
+  font-style: normal;
+  font-weight: normal;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: center;
+
+  color: #5b5b5c;
+`;
+
+const Note = styled.p`
   font-style: normal;
   font-weight: normal;
   line-height: 16px;
@@ -40,30 +54,32 @@ const CopyRight = styled.p`
 
 export default function() {
   return (
-    <div className="row">
-      <div className="col-xs-12">
-        <Nav>
-          <a href="#">О компании</a>
-          <a href="#">Партнерска программа</a>
-          <a href="#">Реклама</a>
-          <a href="#">Вакансии</a>
-          <a href="#">Помощь</a>
-          <a href="#">Правила</a>
-          <a href="#">White Label авиабилеты</a>
-        </Nav>
-        <Nav>
-          <a href="#">Вконтакте</a>
-          <a href="#">Фейсбук</a>
-          <a href="#">Инстаграм</a>
-          <a href="#">Твиттер</a>
-          <a href="#">Вайбер</a>
-        </Nav>
-        <P>Поиск и бронирование отелей</P>
+    <ListFooterLink>
+      <div className="row">
+        <div className="col-xs-12">
+          <Nav>
+            <Link href="#">О компании</Link>
+            <Link href="#">Партнерска программа</Link>
+            <Link href="#">Реклама</Link>
+            <Link href="#">Вакансии</Link>
+            <Link href="#">Помощь</Link>
+            <Link href="#">Правила</Link>
+            <Link href="#">White Label авиабилеты</Link>
+          </Nav>
+          <Nav>
+            <Link href="#">Вконтакте</Link>
+            <Link href="#">Фейсбук</Link>
+            <Link href="#">Инстаграм</Link>
+            <Link href="#">Твиттер</Link>
+            <Link href="#">Вайбер</Link>
+          </Nav>
+          <Note>Поиск и бронирование отелей</Note>
+        </div>
+        <div className="col-xs-12">
+          <Marketplace />
+          <CopyRight>© 2007–2018, Aviasales — дешевые авиабилеты</CopyRight>
+        </div>
       </div>
-      <div className="col-xs-12">
-        <Marketplace />
-        <CopyRight>© 2007–2018, Aviasales — дешевые авиабилеты</CopyRight>
-      </div>
-    </div>
+    </ListFooterLink>
   );
 }
