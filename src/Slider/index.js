@@ -22,7 +22,7 @@ const TitleName = styled.h2`
   color: #5c5c5c;
 `;
 
-const SliderWrapper = styled.div`
+const Sliders = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +74,7 @@ export default function() {
               <TitleName>
                 Дешевые авиабилеты от крупнейших авиакомпаний и агентств
               </TitleName>
-              <SliderWrapper>
+              <Sliders>
                 <ArrowPrev />
                 <SliderContent>
                   <AgencyLogo1 src={agencyLogo1} alt="" />
@@ -84,7 +84,7 @@ export default function() {
                   <AgencyLogo5 src={agencyLogo5} alt="" />
                 </SliderContent>
                 <ArrowNext />
-              </SliderWrapper>
+              </Sliders>
             </div>
           </div>
         </div>

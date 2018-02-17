@@ -12,7 +12,7 @@ const BestPrice = styled.section`
 
 // Тайтл начало
 
-const SectionTitleWrap = styled.div`
+const SectionTitle = styled.div`
   padding-top: 2.5rem;
   text-align: center;
   min-width: 312px;
@@ -30,7 +30,7 @@ const Label = styled.div`
   height: 64px;
 `;
 
-const TitleText = styled.h2`
+const Txt = styled.h2`
   font-weight: 500;
   line-height: 1.125rem;
   font-size: 1.125rem
@@ -45,7 +45,7 @@ const TitleText = styled.h2`
 
 // Тайтл Конец
 
-const ListWrapper = styled.div`
+const PopularDirect = styled.div`
   margin-top: 2.5rem;
 
   @media (min-width: 768px) {
@@ -145,15 +145,15 @@ export default function() {
   return (
     <BestPrice>
       <div className="container">
-        <SectionTitleWrap>
+        <SectionTitle>
           <Label />
-          <TitleText>Лучшие цены на авиабилеты за последний месяц</TitleText>
-        </SectionTitleWrap>
+          <Txt>Лучшие цены на авиабилеты за последний месяц</Txt>
+        </SectionTitle>
         <div className="row">
           <div className="col-xl-10 col-xl-offset-1 col-md-10 col-md-offset-1">
             <div className="row">
               <div className="col-xs-12 col-xl-4">
-                <ListWrapper>
+                <PopularDirect>
                   <ListHeader>
                     <Flag src={flagRu} alt="Россия" />
                     <CityCountry>
@@ -178,10 +178,10 @@ export default function() {
                       Из Челябинска<Price>от 9 148 ₽</Price>
                     </ListItem>
                   </List>
-                </ListWrapper>
+                </PopularDirect>
               </div>
               <div className="col-xs-12 col-xl-4">
-                <ListWrapper>
+                <PopularDirect>
                   <ListHeader>
                     <Flag src={flagMol} alt="Молдавия" />
                     <CityCountry>
@@ -206,10 +206,10 @@ export default function() {
                       Из Нового Уренгоя<Price>от 9 148 ₽</Price>
                     </ListItem>
                   </List>
-                </ListWrapper>
+                </PopularDirect>
               </div>
               <div className="col-xs-12 col-xl-4">
-                <ListWrapper>
+                <PopularDirect>
                   <ListHeader>
                     <Flag src={flagArm} alt="Армения" />
                     <CityCountry>
@@ -234,7 +234,7 @@ export default function() {
                       Из Нового Уренгоя<Price>от 15 987 ₽</Price>
                     </ListItem>
                   </List>
-                </ListWrapper>
+                </PopularDirect>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ import history from "./04-history.svg";
 import nightlife from "./05-nightlife.svg";
 import shopping from "./06-shopping.svg";
 
-const Wrapper = styled.div`
+const Category = styled.div`
   width: 100%;
   margin-top: 2rem;
 
@@ -112,7 +112,7 @@ const Shopping = Button.extend`
 
 export default function() {
   return (
-    <Wrapper>
+    <Category>
       <Nav>
         <Tab>
           <All>
@@ -147,6 +147,6 @@ export default function() {
           </Shopping>
         </Tab>
       </Nav>
-    </Wrapper>
+    </Category>
   );
 }

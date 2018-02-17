@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Inputs = styled.div`
   display: inline-block;
   width: 100%;
 
-  @media (min-width: 768px) {
-    width: 100%;
-  }
-
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     width: 50%;
   }
 `;
@@ -23,7 +19,7 @@ const Input = styled.input`
   }
 `;
 
-const DepartInput = Input.extend`
+const Depart = Input.extend`
   @media (max-width: 767px) {
     width: 100%;
     border-top-right-radius: 4px;
@@ -34,14 +30,12 @@ const DepartInput = Input.extend`
     width: calc(50% - 1px);
     border-top-left-radius: 4px;
   }
-  @media (min-width: 1440px) {
-    margin-right: 1px;
-    width: calc(50% - 1px);
+  @media (min-width: 1200px) {
     border-bottom-left-radius: 4px;
   }
 `;
 
-const ComingInput = Input.extend`
+const Coming = Input.extend`
   @media (max-width: 767px) {
     width: 100%;
     margin-top: 3px;
@@ -51,7 +45,7 @@ const ComingInput = Input.extend`
     width: calc(50% - 1px);
     border-top-right-radius: 4px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     margin: 0 1px;
     width: calc(50% - 2px);
     border-top-right-radius: 0px;
@@ -60,9 +54,9 @@ const ComingInput = Input.extend`
 
 export default function() {
   return (
-    <Wrapper>
-      <DepartInput placeholder="Город вылета" />
-      <ComingInput placeholder="Город прибытия" />
-    </Wrapper>
+    <Inputs>
+      <Depart placeholder="Город вылета" />
+      <Coming placeholder="Город прибытия" />
+    </Inputs>
   );
 }

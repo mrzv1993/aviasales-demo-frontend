@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
+import Rating from "./Rating";
+
 import mockup1x from "./phone1x.png";
 import mockup2x from "./phone2x.png";
-import star from "../assets/star.svg";
-import halfStar from "../assets/half-star.svg";
 
 import apple from "./apple.svg";
 import android from "./android.svg";
@@ -24,29 +24,6 @@ const Title = styled.h2`
   @media (min-width: 767px) {
     text-align: left;
   }
-`;
-const Rating = styled.ul`
-  list-style: none;
-  padding: 0;
-
-  @media (min-width: 767px) {
-    text-align: left;
-  }
-`;
-
-const Star = styled.li`
-  display: inline;
-  margin-left: 0.5rem;
-  padding: 0;
-`;
-
-const Mark = Star.extend`
-  font-style: normal;
-  font-weight: normal;
-  line-height: 20px;
-  font-size: 14px;
-
-  color: #ffffff;
 `;
 
 const AppList = styled.nav`
@@ -115,24 +92,7 @@ export default function() {
         <div className="row center-xs left-md">
           <div className="col-xs-12 col-md-8 col-md-offset-4">
             <Title>Скачай мобильное приложение Aviasales.ru</Title>
-            <Rating>
-              <Star>
-                <img src={star} alt="1" />
-              </Star>
-              <Star>
-                <img src={star} alt="2" />
-              </Star>
-              <Star>
-                <img src={star} alt="3" />
-              </Star>
-              <Star>
-                <img src={star} alt="4" />
-              </Star>
-              <Star>
-                <img src={halfStar} alt="5" />
-              </Star>
-              <Mark>Более 103 000 оценок</Mark>
-            </Rating>
+            <Rating />
           </div>
         </div>
         <div className="row">

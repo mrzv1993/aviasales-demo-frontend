@@ -10,7 +10,7 @@ const MainArticles = styled.section`
   padding: 1.5rem 0;
 `;
 
-const TitleWrap = styled.div`
+const Title = styled.div`
   font-weight: bold;
   line-height: 18px;
   font-size: 13px;
@@ -19,7 +19,7 @@ const TitleWrap = styled.div`
   color: #4a4a4a;
 `;
 
-const Title = styled.h3`
+const Txt = styled.h3`
   font-weight: bold;
   line-height: 18px;
   font-size: 13px;
@@ -64,10 +64,10 @@ export default function() {
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
-            <TitleWrap>
+            <Title>
               <AeroImg src={aero} />
-              <Title>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Title>
-            </TitleWrap>
+              <Txt>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Txt>
+            </Title>
 
             <Article>
               Aviasales.ru — это метапоисковик авиабилетов. Мы ищем билеты на
@@ -84,10 +84,10 @@ export default function() {
             </Article>
           </div>
           <div className="col-xs-12">
-            <TitleWrap>
+            <Title>
               <AtImg src={at} />
               <Title>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Title>
-            </TitleWrap>
+            </Title>
             <Article>
               Электронный авиабилет — это, по сути, обычный билет на самолет, но
               только в менее привычном для путешественника виде. Вся информация
@@ -106,10 +106,10 @@ export default function() {
             </Article>
           </div>
           <div className="col-xs-12">
-            <TitleWrap>
+            <Title>
               <ListImg src={list} />
               <Title>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Title>
-            </TitleWrap>
+            </Title>
             <Article>
               Есть масса путеводителей по странам, но ни одного о том, как
               провести время в самолете. Для того, чтобы сделать ваш перелет

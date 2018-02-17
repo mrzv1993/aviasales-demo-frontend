@@ -4,7 +4,7 @@ import styled from "styled-components";
 import calendar from "./calendar.svg";
 import arrow from "./arrow.svg";
 
-const Wrapper = styled.div`
+const Buttons = styled.div`
   display: inline-block;
   width: 100%;
 
@@ -13,12 +13,12 @@ const Wrapper = styled.div`
     width: 100%;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     width: 50%;
   }
 `;
 
-const Buttons = styled.button`
+const Button = styled.button`
   padding: 1.15rem 1rem;
   background-color: #ffffff;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@ const Buttons = styled.button`
   text-align: left;
 `;
 
-const DateWrap = styled.div`
+const DateButton = styled.div`
   display: inline-block;
   width: 100%;
 
@@ -45,13 +45,13 @@ const DateWrap = styled.div`
     margin-right: 1px;
     width: calc(50% - 1px);
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     margin: 0 1px;
     width: calc(50% - 2px);
   }
 `;
 
-const DepartButton = Buttons.extend`
+const Depart = Button.extend`
   margin-right: 1px;
   width: calc(50% - 1px);
   background-image: url(${calendar});
@@ -59,18 +59,18 @@ const DepartButton = Buttons.extend`
   @media (min-width: 768px) {
     border-bottom-left-radius: 4px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     border-bottom-left-radius: 0px;
   }
 `;
 
-const ReturnButton = Buttons.extend`
+const Return = Button.extend`
   margin-left: 1px;
   width: calc(50% - 1px);
   background-image: url(${calendar});
 `;
 
-const PassengerButton = Buttons.extend`
+const PassengerButton = Button.extend`
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   background-image: url(${arrow});
@@ -85,25 +85,25 @@ const PassengerButton = Buttons.extend`
     margin-left: 1px;
     width: calc(50% - 1px);
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     border-top-right-radius: 4px;
   }
 `;
 
-const Span = styled.span`
+const Quantity = styled.span`
   color: #4a4a4a;
 `;
 
 export default function() {
   return (
-    <Wrapper>
-      <DateWrap>
-        <DepartButton>Туда</DepartButton>
-        <ReturnButton>Обратно</ReturnButton>
-      </DateWrap>
+    <Buttons>
+      <DateButton>
+        <Depart>Туда</Depart>
+        <Return>Обратно</Return>
+      </DateButton>
       <PassengerButton>
-        <Span>1 пассажир,</Span> эконом
+        <Quantity>1 пассажир,</Quantity> эконом
       </PassengerButton>
-    </Wrapper>
+    </Buttons>
   );
 }

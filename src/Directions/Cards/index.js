@@ -17,15 +17,13 @@ import barca2x from "./barca@2x.jpg";
 import flagRu from "./flag-ru.svg";
 import flagSp from "./flag-sp.svg";
 
-const Wrapper = styled.div`
+const Cards = styled.div`
   margin-top: 2rem;
 
   @media (max-width: 767px) {
     margin-top: 2.5rem;
   }
 `;
-
-// Карточка
 
 const Link = styled.a`
   text-decoration: none;
@@ -138,7 +136,7 @@ const Country = styled.p`
 
 export default function() {
   return (
-    <Wrapper>
+    <Cards>
       <div className="row">
         <div className="col-xs-12 col-xl-6">
           <Link href="#">
@@ -297,6 +295,6 @@ export default function() {
           </Link>
         </div>
       </div>
-    </Wrapper>
+    </Cards>
   );
 }
