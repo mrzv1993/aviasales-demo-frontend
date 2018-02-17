@@ -62,6 +62,12 @@ const PopularDirect = styled.div`
   }
 `;
 
+const PopularDirectLast = PopularDirect.extend`
+  @media (min-width: 1200px) {
+    border-right: none;
+  }
+`;
+
 const ListHeader = styled.div`
   display: flex;
   align-items: center;
@@ -209,7 +215,7 @@ export default function() {
                 </PopularDirect>
               </div>
               <div className="col-xs-12 col-xl-4">
-                <PopularDirect>
+                <PopularDirectLast>
                   <ListHeader>
                     <Flag src={flagArm} alt="Армения" />
                     <CityCountry>
@@ -234,7 +240,7 @@ export default function() {
                       Из Нового Уренгоя<Price>от 15 987 ₽</Price>
                     </ListItem>
                   </List>
-                </PopularDirect>
+                </PopularDirectLast>
               </div>
             </div>
           </div>
