@@ -5,8 +5,9 @@ import rating from "./rating.svg";
 const Rating = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 0.5rem;
+
   @media (min-width: 768px) {
-    margin-bottom: 43px;
     justify-content: flex-start;
   }
 `;

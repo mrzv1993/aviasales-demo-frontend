@@ -27,12 +27,6 @@ const Cards = styled.div`
 
 const Link = styled.a`
   text-decoration: none;
-
-  &:hover {
-    h4 {
-      color: #ff8e41;
-    }
-  }
 `;
 
 const Card = styled.div`
