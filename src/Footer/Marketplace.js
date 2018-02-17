@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import appStore from "../assets/app-store.svg";
-import googlePlay from "../assets/google-play.svg";
-import windowsPhone from "../assets/windows-phone.svg";
+import appStore from "./app-store.svg";
+import googlePlay from "./google-play.svg";
+import windowsPhone from "./windows-phone.svg";
 
 const MarketPlaces = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  align-items: center;
   list-style: none;
-  @media (max-width: 767px) {
-    flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+
+  @media (min-width: 1200px) {
+    margin-top: 0;
   }
 `;
 
 const StoreImg = styled.img`
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 `;
 
 const AppStore = StoreImg.extend``;

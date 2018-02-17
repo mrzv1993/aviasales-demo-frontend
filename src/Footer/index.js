@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import FooterLinks from "./FooterLinks";
-import Links from "./Links";
+import SocialLinks from "./SocialLinks";
 
 const Footer = styled.footer`
   background-color: #ffffff;
@@ -12,7 +12,7 @@ export default function() {
     <Footer>
       <div className="container">
         <FooterLinks />
-        <Links />
+        <SocialLinks />
       </div>
     </Footer>
   );

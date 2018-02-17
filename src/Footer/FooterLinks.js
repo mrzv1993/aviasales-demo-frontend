@@ -39,8 +39,11 @@ const Link = styled.a`
   font-size: 0.75rem;
   text-decoration: none;
   padding: 0.25rem 0;
-
   color: #5b5b5c;
+
+  &:hover {
+    color: #ff8e41;
+  }
 `;
 
 const LastLink = styled.a`
@@ -48,6 +51,7 @@ const LastLink = styled.a`
   line-height: 16px;
   font-size: 12px;
   padding-top: 1rem;
+  text-decoration: none;
 
   color: #4a4a4a;
 `;
