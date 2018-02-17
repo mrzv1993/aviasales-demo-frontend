@@ -36,32 +36,36 @@ const Title = styled.h2`
 const AppList = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
+
+  @media (max-width: 767px) {
+    padding: 2rem 0;
+  }
 
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: flex-start;
-    padding: 8rem 0;
+    padding: 2rem 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 10rem 0;
+    padding: 3rem 0;
   }
 `;
 
 const AppLink = styled.a`
   color: inherit;
   text-decoration: none;
-  padding: 1rem 0;
   display: flex;
   align-items: center;
   line-height: 24px;
   font-size: 14px;
 
   color: #ffffff;
+  padding: 1rem 0;
 
   @media (min-width: 768px) {
-    padding: 0 1.5rem;
+    margin-right: 2rem;
+    padding: 2;
   }
   &:hover {
     text-decoration: underline;
@@ -70,6 +74,7 @@ const AppLink = styled.a`
 
 const MarketImg = styled.img`
   height: 24px;
+  margin-right: 0.75rem;
 `;
 
 const WindowsImg = MarketImg.extend`

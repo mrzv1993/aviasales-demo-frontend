@@ -28,7 +28,7 @@ const Link = styled.a`
   margin-left: 1rem;
 `;
 
-const Form = styled.div`
+const Form = styled.form`
   position: relative;
   width: 344px;
   margin: 0 auto;
