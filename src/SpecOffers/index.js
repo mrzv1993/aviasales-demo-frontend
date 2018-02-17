@@ -12,7 +12,11 @@ const SpecOffers = styled.section`
 const OferLogo = styled.img`
   height: 100%;
   margin-left: 1rem;
-  width: 128px;
+  width: 96px;
+
+  @media (max-width: 767px) {
+    width: 160px;
+  }
 `;
 
 const Title = styled.h2`
@@ -70,7 +74,7 @@ const Price = styled.p`
   color: #5c5c5c;
 `;
 
-const Days = styled.span`
+const Days = styled.p`
   font-style: normal;
   font-weight: normal;
   line-height: 15px;
@@ -143,7 +147,7 @@ export default function() {
       <div className="container">
         <Title>Спецпредложения на авиабилеты</Title>
         <div className="row">
-          <div className="col-xs-12 col-md-4">
+          <div className="col-sm-12 col-md-4">
             <Card>
               <Header>
                 <CardTitle>Билеты от 499 рублей!</CardTitle>
@@ -162,7 +166,7 @@ export default function() {
               <Button>Узнать подробности</Button>
             </Card>
           </div>
-          <div className="col-xs-12 col-md-4">
+          <div className="col-sm-12 col-md-4">
             <Card>
               <Header>
                 <CardTitle>В Нью-Йорк от 20 680 рублей</CardTitle>
@@ -181,7 +185,7 @@ export default function() {
               <Button>Узнать подробности</Button>
             </Card>
           </div>
-          <div className="col-xs-12 col-md-4">
+          <div className="col-sm-12 col-md-4">
             <Card>
               <Header>
                 <CardTitle>В Лос-Анджелес от 22 360 рублей</CardTitle>
