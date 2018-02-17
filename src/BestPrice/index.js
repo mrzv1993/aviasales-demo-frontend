@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import calendar from "./assets/calendar-img.svg";
-import flagRu from "./assets/flag-ru.svg";
+import calendar from "./calendar-img.svg";
+import flagRu from "./flag-ru.svg";
+import flagMol from "./flag-mol.svg";
+import flagArm from "./flag-arm.svg";
 
 const BestPrice = styled.section`
   background: linear-gradient(180deg, #f8fcff 0%, #ffffff 100%);
@@ -181,10 +183,10 @@ export default function() {
               <div className="col-xs-12 col-xl-4">
                 <ListWrapper>
                   <ListHeader>
-                    <Flag src={flagRu} alt="Россия" />
+                    <Flag src={flagMol} alt="Молдавия" />
                     <CityCountry>
-                      <City>Симферополь (Крым)</City>
-                      <Country>Россия</Country>
+                      <City>Кишинёв</City>
+                      <Country>Молдавия</Country>
                     </CityCountry>
                   </ListHeader>
                   <List>
@@ -195,13 +197,13 @@ export default function() {
                       Из Санкт-Петербурга<Price>от 7 857 ₽</Price>
                     </ListItem>
                     <ListItem>
-                      Из Новосибирска<Price>от 15 127 ₽</Price>
+                      Из Краснодара<Price>от 15 127 ₽</Price>
                     </ListItem>
                     <ListItem>
-                      Из Екатеринбурга<Price>от 9 275 ₽</Price>
+                      Из Сургута<Price>от 9 275 ₽</Price>
                     </ListItem>
                     <ListItem>
-                      Из Челябинска<Price>от 9 148 ₽</Price>
+                      Из Нового Уренгоя<Price>от 9 148 ₽</Price>
                     </ListItem>
                   </List>
                 </ListWrapper>
@@ -209,7 +211,7 @@ export default function() {
               <div className="col-xs-12 col-xl-4">
                 <ListWrapper>
                   <ListHeader>
-                    <Flag src={flagRu} alt="Россия" />
+                    <Flag src={flagArm} alt="Армения" />
                     <CityCountry>
                       <City>Ереван</City>
                       <Country>Армения</Country>

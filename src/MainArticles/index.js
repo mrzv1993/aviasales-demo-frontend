@@ -1,16 +1,44 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
+import aero from "./aero.svg";
+import at from "./at.svg";
+import list from "./list.svg";
+
 const MainArticles = styled.section`
   background: #ffffff;
+  padding: 1.5rem 0;
+`;
+
+const TitleWrap = styled.div`
+  font-weight: bold;
+  line-height: 18px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  color: #4a4a4a;
 `;
 
 const Title = styled.h3`
   font-weight: bold;
   line-height: 18px;
   font-size: 13px;
+  display: inline-block;
+  padding-left: 0.5rem;
 
   color: #4a4a4a;
+`;
+
+const AeroImg = styled.img`
+  height: 1rem;
+`;
+
+const AtImg = styled.img`
+  height: 1rem;
+`;
+
+const ListImg = styled.img`
+  height: 1rem;
 `;
 
 const Article = styled.p`
@@ -36,7 +64,11 @@ export default function() {
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
-            <Title>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Title>
+            <TitleWrap>
+              <AeroImg src={aero} />
+              <Title>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Title>
+            </TitleWrap>
+
             <Article>
               Aviasales.ru — это метапоисковик авиабилетов. Мы ищем билеты на
               самолет по сотням авиакомпаний и находим за считанные минуты самые
@@ -52,7 +84,10 @@ export default function() {
             </Article>
           </div>
           <div className="col-xs-12">
-            <Title>ЭЛЕКТРОННЫЙ АВИАБИЛЕТ</Title>
+            <TitleWrap>
+              <AtImg src={at} />
+              <Title>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Title>
+            </TitleWrap>
             <Article>
               Электронный авиабилет — это, по сути, обычный билет на самолет, но
               только в менее привычном для путешественника виде. Вся информация
@@ -71,7 +106,10 @@ export default function() {
             </Article>
           </div>
           <div className="col-xs-12">
-            <Title>20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ</Title>
+            <TitleWrap>
+              <ListImg src={list} />
+              <Title>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</Title>
+            </TitleWrap>
             <Article>
               Есть масса путеводителей по странам, но ни одного о том, как
               провести время в самолете. Для того, чтобы сделать ваш перелет

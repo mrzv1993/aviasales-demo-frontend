@@ -8,7 +8,7 @@ import agencyLogo3 from "./agency-logo-3.png";
 import agencyLogo4 from "./agency-logo-4.png";
 import agencyLogo5 from "./agency-logo-5.png";
 
-const Wrapper = styled.header`
+const Slider = styled.header`
   background: #fff;
   margin-top: 6rem;
 `;
@@ -45,7 +45,7 @@ const ArrowNext = styled.button`
   transform: rotate(180deg);
 `;
 
-const Slider = styled.div``;
+const SliderContent = styled.div``;
 
 const AgencyLogo1 = styled.img`
   padding: 1rem;
@@ -66,29 +66,29 @@ const AgencyLogo5 = styled.img`
 
 export default function() {
   return (
-    <Wrapper>
-      <div className="container">
-        <div className="row center-xs">
-          <div className="col-xl-10 col-md-12">
-            <div className="hidden-xs">
+    <div className="hidden-xs">
+      <Slider>
+        <div className="container">
+          <div className="row center-xs">
+            <div className="col-xl-10 col-md-12">
               <TitleName>
                 Дешевые авиабилеты от крупнейших авиакомпаний и агентств
               </TitleName>
               <SliderWrapper>
                 <ArrowPrev />
-                <Slider>
+                <SliderContent>
                   <AgencyLogo1 src={agencyLogo1} alt="" />
                   <AgencyLogo2 src={agencyLogo2} alt="" />
                   <AgencyLogo3 src={agencyLogo3} alt="" />
                   <AgencyLogo4 src={agencyLogo4} alt="" />
                   <AgencyLogo5 src={agencyLogo5} alt="" />
-                </Slider>
+                </SliderContent>
                 <ArrowNext />
               </SliderWrapper>
             </div>
           </div>
         </div>
-      </div>
-    </Wrapper>
+      </Slider>
+    </div>
   );
 }

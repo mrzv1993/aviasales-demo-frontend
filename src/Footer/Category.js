@@ -64,7 +64,7 @@ export default function() {
                 <a href="#">Грузия</a>
               </li>
               <li>
-                <LastLink href="#">Все страны</LastLink>
+                <LastLink href="#">Все страны →</LastLink>
               </li>
             </List>
             <List>
@@ -88,7 +88,7 @@ export default function() {
                 <a href="#">Лондон</a>
               </li>
               <li>
-                <LastLink href="#">Все города</LastLink>
+                <LastLink href="#">Все города →</LastLink>
               </li>
             </List>
           </ListWrap>
@@ -116,7 +116,7 @@ export default function() {
                 <a href="#">KLM</a>
               </li>
               <li>
-                <LastLink href="#">Все авиакомпании</LastLink>
+                <LastLink href="#">Все авиакомпании →</LastLink>
               </li>
             </List>
             <List>
@@ -140,7 +140,7 @@ export default function() {
                 <a href="#">Гамбург</a>
               </li>
               <li>
-                <LastLink href="#">Все аэропорты</LastLink>
+                <LastLink href="#">Все аэропорты →</LastLink>
               </li>
             </List>
           </ListWrap>
