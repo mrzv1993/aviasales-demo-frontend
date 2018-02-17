@@ -109,7 +109,7 @@ const Country = styled.p`
 
 const List = styled.ul`
   list-style: none;
-  padding-right: 1rem;
+  padding-right: 2rem;
 `;
 
 const ListItem = styled.li`
