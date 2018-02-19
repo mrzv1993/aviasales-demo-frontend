@@ -3,11 +3,9 @@ import styled from "styled-components";
 
 import Inputs from "./Inputs";
 import Buttons from "./Buttons";
+import SearchButton from "./SearchButton";
 
-import calendar from "./calendar.svg";
-import arrow from "./arrow.svg";
-
-const Form = styled.div`
+const Form = styled.form`
     margin: 1.5rem auto 0 auto;
     width: 100%;
 
@@ -24,6 +22,7 @@ export default function() {
         <Form>
           <Inputs />
           <Buttons />
+          <SearchButton />
         </Form>
       </div>
     </div>

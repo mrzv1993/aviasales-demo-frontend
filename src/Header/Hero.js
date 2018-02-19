@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import aero from "./aero.svg";
 import Form from "./Form";
-import Button from "./Button";
 
 const Hero = styled.div`
   display: flex;
@@ -53,7 +51,6 @@ export default function() {
       <Title>Поиск дешевых авиабилетов</Title>
       <SubTitle>Лучший способ купить авиабилеты дешево</SubTitle>
       <Form />
-      <Button />
     </Hero>
   );
 }
