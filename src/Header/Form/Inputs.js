@@ -20,15 +20,15 @@ const Input = styled.input`
 `;
 
 const Depart = Input.extend`
-  @media (max-width: 767px) {
-    width: 100%;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-  }
+  width: 100%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+
   @media (min-width: 768px) {
     margin-right: 1px;
     width: calc(50% - 1px);
     border-top-left-radius: 4px;
+    border-top-right-radius: 0;
   }
   @media (min-width: 1200px) {
     border-bottom-left-radius: 4px;
@@ -36,10 +36,9 @@ const Depart = Input.extend`
 `;
 
 const Coming = Input.extend`
-  @media (max-width: 767px) {
-    width: 100%;
-    margin-top: 3px;
-  }
+  width: 100%;
+  margin-top: 3px;
+
   @media (min-width: 768px) {
     margin-left: 1px;
     width: calc(50% - 1px);

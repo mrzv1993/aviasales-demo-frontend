@@ -18,10 +18,10 @@ import flagRu from "./flag-ru.svg";
 import flagSp from "./flag-sp.svg";
 
 const Cards = styled.div`
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 
-  @media (max-width: 767px) {
-    margin-top: 2.5rem;
+  @media (min-width: 768px) {
+    margin-top: 2rem;
   }
 `;
 
@@ -47,7 +47,7 @@ const Img = styled.img`
   border-top-left-radius: 8px;
 `;
 
-const DescriptionWrapper = styled.div`
+const DescriptionCard = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -89,19 +89,22 @@ const Date = styled.p`
 `;
 
 const Flag = styled.img`
-  width: 32px;
-  height: 32px;
-  margin-left: 1rem;
+  width: 100%;
+  display: none;
 
-  @media (max-width: 767px) {
-    width: 100%;
-    display: none;
+  @media (min-width: 767px) {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-left: 1rem;
   }
 `;
 
 const CityCountry = styled.div`
-  @media (max-width: 374px) {
-    max-width: 144px;
+  width: 144px;
+
+  @media (min-width: 576px) {
+    width: 100%;
   }
 `;
 
@@ -142,7 +145,7 @@ export default function() {
                 />
                 <Img src={сrasnodar} srcSet={сrasnodar2x} alt="Краснодар" />
               </picture>
-              <DescriptionWrapper>
+              <DescriptionCard>
                 <Flag src={flagRu} alt="Россия" />
                 <Description>
                   <CityCountry>
@@ -154,7 +157,7 @@ export default function() {
                     <Date>18 марта</Date>
                   </PriceDate>
                 </Description>
-              </DescriptionWrapper>
+              </DescriptionCard>
             </Card>
           </Link>
         </div>
@@ -168,7 +171,7 @@ export default function() {
                 />
                 <Img src={sochi} srcSet={sochi2x} alt="Сочи" />
               </picture>
-              <DescriptionWrapper>
+              <DescriptionCard>
                 <Flag src={flagRu} alt="Россия" />
                 <Description>
                   <CityCountry>
@@ -180,7 +183,7 @@ export default function() {
                     <Date>27 марта</Date>
                   </PriceDate>
                 </Description>
-              </DescriptionWrapper>
+              </DescriptionCard>
             </Card>
           </Link>
         </div>
@@ -194,7 +197,7 @@ export default function() {
                 />
                 <Img src={spb} srcSet={spb2x} alt="Санкт-Петербург" />
               </picture>
-              <DescriptionWrapper>
+              <DescriptionCard>
                 <Flag src={flagRu} alt="Россия" />
                 <Description>
                   <CityCountry>
@@ -206,7 +209,7 @@ export default function() {
                     <Date>19 февраля</Date>
                   </PriceDate>
                 </Description>
-              </DescriptionWrapper>
+              </DescriptionCard>
             </Card>
           </Link>
         </div>
@@ -220,7 +223,7 @@ export default function() {
                 />
                 <Img src={minVodi} srcSet={minVodi2x} alt="Миниральные воды" />
               </picture>
-              <DescriptionWrapper>
+              <DescriptionCard>
                 <Flag src={flagRu} alt="Россия" />
                 <Description>
                   <CityCountry>
@@ -232,7 +235,7 @@ export default function() {
                     <Date>13 марта</Date>
                   </PriceDate>
                 </Description>
-              </DescriptionWrapper>
+              </DescriptionCard>
             </Card>
           </Link>
         </div>
@@ -246,7 +249,7 @@ export default function() {
                 />
                 <Img src={krim} srcSet={krim2x} alt="Симферопаль" />
               </picture>
-              <DescriptionWrapper>
+              <DescriptionCard>
                 <Flag src={flagRu} alt="Россия" />
                 <Description>
                   <CityCountry>
@@ -258,7 +261,7 @@ export default function() {
                     <Date>18 марта</Date>
                   </PriceDate>
                 </Description>
-              </DescriptionWrapper>
+              </DescriptionCard>
             </Card>
           </Link>
         </div>
@@ -272,7 +275,7 @@ export default function() {
                 />
                 <Img src={barca} srcSet={barca2x} alt="Барселона" />
               </picture>
-              <DescriptionWrapper>
+              <DescriptionCard>
                 <Flag src={flagSp} alt="Россия" />
                 <Description>
                   <CityCountry>
@@ -284,7 +287,7 @@ export default function() {
                     <Date>24 марта</Date>
                   </PriceDate>
                 </Description>
-              </DescriptionWrapper>
+              </DescriptionCard>
             </Card>
           </Link>
         </div>

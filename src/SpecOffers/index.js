@@ -12,11 +12,12 @@ const SpecOffers = styled.section`
 const OferLogo = styled.img`
   height: 100%;
   margin-left: 1rem;
-  width: 96px;
-
-  @media (max-width: 767px) {
-    width: 160px;
+  
+  width: 160px;
   }
+
+  @media (min-width: 768px) {
+    width: 96px;
 `;
 
 const Title = styled.h2`
@@ -56,7 +57,7 @@ const Info = styled.div`
   align-items: center;
 `;
 
-const PriceWrapper = styled.div`
+const PriceInfo = styled.div`
   margin-right: 1rem;
   margin-top: 1rem;
 `;
@@ -154,10 +155,10 @@ export default function() {
               </Header>
               <Info>
                 <OferLogo src={airFrance} alt="Aviasales" title="Aviasales" />
-                <PriceWrapper>
+                <PriceInfo>
                   <Price>от 499 ₽</Price>
                   <Days>Осталось 45 дней</Days>
-                </PriceWrapper>
+                </PriceInfo>
               </Info>
               <Description>
                 Билеты от 499 рублей! Специальное предложение от авиакомпании
@@ -173,10 +174,10 @@ export default function() {
               </Header>
               <Info>
                 <OferLogo src={lufthansa} alt="Aviasales" title="Aviasales" />
-                <PriceWrapper>
+                <PriceInfo>
                   <Price>от 20 680 ₽</Price>
                   <Days>Осталось 19 дней</Days>
-                </PriceWrapper>
+                </PriceInfo>
               </Info>
               <Description>
                 Из Москвы в США от 20 680 рублей! Специальное предложение от
@@ -192,10 +193,10 @@ export default function() {
               </Header>
               <Info>
                 <OferLogo src={lufthansa} alt="Aviasales" title="Aviasales" />
-                <PriceWrapper>
+                <PriceInfo>
                   <Price>от 22 360 ₽</Price>
                   <Days>Осталось 17 дней</Days>
-                </PriceWrapper>
+                </PriceInfo>
               </Info>
               <Description>
                 Из Москвы в США от 22 360 рублей! Специальное предложение от

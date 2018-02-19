@@ -47,15 +47,7 @@ const Txt = styled.h2`
 
 const PopularDirect = styled.div`
   margin-top: 2.5rem;
-
-  @media (min-width: 768px) {
-    margin-top: 3.5rem;
-  }
-
-  @media (max-width: 1200px) {
-    border-bottom: 1px dashed #afbec6;
-    margin-top: 3.5rem;
-  }
+  border-bottom: 1px dashed #afbec6;
 
   @media (min-width: 1200px) {
     border-right: 1px dashed #afbec6;

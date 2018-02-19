@@ -36,14 +36,12 @@ const Button = styled.button`
 const DateButton = styled.div`
   display: inline-block;
   width: 100%;
-
-  @media (max-width: 767px) {
-    margin-top: 3px;
-  }
+  margin-top: 3px;
 
   @media (min-width: 768px) {
     margin-right: 1px;
     width: calc(50% - 1px);
+    margin-top: 0;
   }
   @media (min-width: 1200px) {
     margin: 0 1px;
@@ -75,9 +73,10 @@ const PassengerButton = Button.extend`
   border-bottom-left-radius: 4px;
   background-image: url(${arrow});
   background-position: center right 1.2rem;
+  margin-top: 3px;
 
-  @media (max-width: 767px) {
-    margin-top: 3px;
+  @media (min-width: 767px) {
+    margin-top: 0;
   }
 
   @media (min-width: 768px) {

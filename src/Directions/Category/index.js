@@ -17,12 +17,12 @@ const Category = styled.div`
 `;
 
 const Nav = styled.div`
-  width: 50%;
+  width: 100%;
   display: inline-flex;
   justify-content: space-between;
 
-  @media (max-width: 767px) {
-    width: 100%;
+  @media (min-width: 767px) {
+    width: 50%;
   }
 
   &:last-child {
