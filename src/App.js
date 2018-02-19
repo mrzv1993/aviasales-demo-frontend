@@ -10,6 +10,8 @@ import MainArticles from "./MainArticles";
 import DownloadApp from "./DownloadApp";
 import Footer from "./Footer";
 
+import HeaderSP from "./HeaderSP";
+
 const Page = styled.div`
   min-width: 320px;
 `;
@@ -27,6 +29,7 @@ class App extends Component {
         <MainArticles />
         <DownloadApp />
         <Footer />
+        <HeaderSP />
       </Page>
     );
   }
