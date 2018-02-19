@@ -36,15 +36,11 @@ const Title = styled.h2`
 const AppList = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 767px) {
-    padding: 2rem 0;
-  }
+  padding: 2rem 0;
 
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: flex-start;
-    padding: 2rem 0;
   }
 
   @media (min-width: 1200px) {
