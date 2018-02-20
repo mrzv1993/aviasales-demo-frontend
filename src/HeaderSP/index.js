@@ -1,35 +1,44 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Input from "../Header/Form/Inputs";
-import Buttons from "../Header/Form/Buttons";
-import SearchButton from "../Header/Form/SearchButton";
-import Header from "./Header";
-
-const Head = styled.header`
+const Header = styled.header`
   padding: 0.5rem 0;
   background: linear-gradient(148.48deg, #079dd4 22.46%, #196ebd 122.26%);
 `;
 
-const Form = styled.form``;
+const PrevPage = styled.button``;
+
+const Flight = styled.div``;
+
+const Title = styled.h2``;
+
+const Date = styled.p``;
+
+const Value = styled.button``;
 
 export default function() {
   return (
-    <Head>
+    <Header>
       <div className="container">
-        <Header />
-        <Form>
-          <div className="row">
-            <div className="col-xl-10">
-              <Input />
-              <Buttons />
-            </div>
-            <div className="col-xl-2">
-              <SearchButton />
-            </div>
+        <div className="row hidden-sm hidden-md hidden-lg hidden-xl">
+          <div className="col-xs-12">
+            <PrevPage>strelks</PrevPage>
+            <Flight>
+              <Title>Москва — Барселона</Title>
+              <Date>24 фев — 3 март, 1 пассажир</Date>
+            </Flight>
+            <Value>RUB</Value>
           </div>
-        </Form>
+        </div>
+        <div className="row hidden-xs">
+          <div className="col-xs-12">
+            <div>kjuj</div>
+            <Value>RUB</Value>
+            <Value>RUB</Value>
+            <Value>RUB</Value>
+          </div>
+        </div>
       </div>
-    </Head>
+    </Header>
   );
 }
