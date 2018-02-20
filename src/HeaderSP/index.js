@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Input from "../Header/Form/Inputs";
 import Buttons from "../Header/Form/Buttons";
 import SearchButton from "../Header/Form/SearchButton";
-import Header from "../Header/Header";
+import Header from "./Header";
 
 const Head = styled.header`
   padding: 0.5rem 0;

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
 import aero from "./aero.svg";
 
-const Button = styled.button`
+const Button = styled.a`
   display: flex;
   margin: 0 auto;
   margin-top: 1rem;

@@ -37,14 +37,18 @@ const Card = styled.div`
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
+  transition: box-shadow 0.5s ease;
+
+  &:hover {
+    box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.35);
+  }
 `;
 
 const Img = styled.img`
   width: 100%;
   background-size: cover;
   display: block;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  will-change: transform;
 `;
 
 const DescriptionCard = styled.div`
@@ -75,6 +79,10 @@ const Price = styled.h4`
   text-align: right;
 
   color: #00bae8;
+
+  ${Card}:hover & {
+    color: #ed752e;
+  }
 `;
 
 const Date = styled.p`
