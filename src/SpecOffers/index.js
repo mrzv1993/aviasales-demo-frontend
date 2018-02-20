@@ -12,12 +12,11 @@ const SpecOffers = styled.section`
 const OferLogo = styled.img`
   height: 100%;
   margin-left: 1rem;
-  
   width: 160px;
   }
 
   @media (min-width: 768px) {
-    width: 96px;
+    width: 96px; }
 `;
 
 const Title = styled.h2`

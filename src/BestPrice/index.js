@@ -102,11 +102,14 @@ const Country = styled.p`
 
 const List = styled.ul`
   list-style: none;
-  padding-right: 2rem;
+
+  @media (min-width: 1200px) {
+    padding-right: 1rem;
+  }
 `;
 
 const ListItem = styled.li`
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   margin-left: -2.5rem;
   font-size: 1rem;
   color: #4a4a4a;

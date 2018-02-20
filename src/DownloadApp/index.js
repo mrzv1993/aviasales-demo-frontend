@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import phoneSm from "./phone-sm.png";
-import phoneLg from "./phone-lg.png";
-
 import Rating from "./Rating";
+
+import xsPhone from "./phone-xs.png";
+import mdPhone from "./phone-md.png";
+import xsPhone2x from "./xs-phone2x.png";
+import mdPhone2x from "./md-phone2x.png";
 
 import apple from "./apple.svg";
 import android from "./android.svg";
@@ -20,16 +22,18 @@ const DownloadApp = styled.section`
 `;
 
 const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   text-align: center;
   color: #ffffff;
   margin: 0;
   margin-top: 1rem;
+  padding: 0 1rem;
 
   @media (min-width: 768px) {
     text-align: left;
     font-size: 2rem;
+    padding: 0;
   }
 `;
 
@@ -98,7 +102,7 @@ const Img = styled.img`
   left: 0;
 `;
 
-export default () => {
+export default function() {
   return (
     <DownloadApp>
       <div className="container">
@@ -112,8 +116,15 @@ export default () => {
           <div className="col-xs-6 col-md-4 col-xl-3 col-xl-offset-1">
             <PhoneImg>
               <Picture>
-                <source srcSet={phoneLg} media="(min-width: 768px)" />
-                <Img src={phoneSm} alt="" />
+                <source
+                  media="(max-width: 767px)"
+                  srcSet={xsPhone + " , " + xsPhone2x + "2x"}
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcSet={mdPhone + " , " + mdPhone2x + "2x"}
+                />
+                <Img src={xsPhone} srcSet={xsPhone + "2x"} alt="Мокап" />
               </Picture>
             </PhoneImg>
           </div>
@@ -134,4 +145,4 @@ export default () => {
       </div>
     </DownloadApp>
   );
-};
+}
