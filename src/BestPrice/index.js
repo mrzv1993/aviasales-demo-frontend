@@ -51,6 +51,7 @@ const PopularDirect = styled.div`
 
   @media (min-width: 1200px) {
     border-right: 1px dashed #afbec6;
+    border-bottom: none;
   }
 `;
 

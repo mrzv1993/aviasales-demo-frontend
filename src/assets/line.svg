@@ -1,0 +1,17 @@
+<svg width="35" height="9" viewBox="0 0 35 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>line</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(1190 -1027)">
+<g id="line">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-1172 1027)" fill="#01B1DE"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-1190 1027)" fill="#FF8A07"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 17 0L 6.53846 0L 0 9L 10.4615 9L 17 0Z"/>
+</defs>
+</svg>
