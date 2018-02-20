@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import aero from "./aero.svg";
 
-const Button = styled.a`
+const Button = styled.button`
   display: flex;
   margin: 0 auto;
   margin-top: 1rem;

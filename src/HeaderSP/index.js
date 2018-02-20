@@ -3,7 +3,15 @@ import styled from "styled-components";
 
 const Header = styled.header`
   padding: 0.5rem 0;
-  background: linear-gradient(148.48deg, #079dd4 22.46%, #196ebd 122.26%);
+  background: linear-gradient(
+    100deg,
+    #00b0de -46.32%,
+    #01aedc -42.65%,
+    #02abdb -38.93%,
+    #02abdb -35.24%,
+    #02abdb -35.02%,
+    #196ebd 52.98%
+  );
 `;
 
 const PrevPage = styled.button``;
