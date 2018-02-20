@@ -35,7 +35,6 @@ const Main = () => (
 const Search = () => (
   <Page>
     <HeaderSP />
-    <TopDestinations />
   </Page>
 );
 

@@ -1,15 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
-import Tab from "./Tab";
 import Category from "./Category";
-
-import anywhere from "./types/anywhere.svg";
-import beach from "./types/beach.svg";
-import city from "./types/city.svg";
-import culture from "./types/culture.svg";
-import nightlife from "./types/nightlife.svg";
-import withBaby from "./types/withBaby.svg";
 
 import compass from "./compass.svg";
 import edit from "./edit.svg";
@@ -17,16 +9,10 @@ import edit from "./edit.svg";
 import ru from "../UI/Flags/ru.svg";
 import sp from "../UI/Flags/sp.svg";
 
-import krasnodar from "./cards/krasnodar.png";
-import sochi from "./cards/sochi.jpeg";
-import saint_p from "./cards/saint-p.jpeg";
-import min_vod from "./cards/min-vod.jpeg";
-import simf from "./cards/simf.jpeg";
-import bcn from "./cards/bcn.jpeg";
-
 const cards = [
   {
-    img: krasnodar,
+    img:
+      "https://ucarecdn.com/73f31a97-e04d-4038-8ed4-313e85cbe4ee/crasnodar.png",
     flag: ru,
     city: "Краснодар",
     price: "Найти от 1 212 ₽",
@@ -34,7 +20,7 @@ const cards = [
     departure: "18 марта"
   },
   {
-    img: sochi,
+    img: "https://ucarecdn.com/e38d4d4d-af06-4368-a3c2-a246a08955fb/sochi.png",
     flag: ru,
     city: "Сочи (Адлер)",
     price: "Найти от 1 334 ₽",
@@ -42,7 +28,7 @@ const cards = [
     departure: "27 марта"
   },
   {
-    img: saint_p,
+    img: "https://ucarecdn.com/9171096e-fa5d-455a-a2b3-a5efaad744df/spb.png",
     flag: ru,
     city: "Санкт-Петербург",
     price: "Найти от 1 508 ₽",
@@ -50,7 +36,8 @@ const cards = [
     departure: "19 февраля"
   },
   {
-    img: min_vod,
+    img:
+      "https://ucarecdn.com/071fceb2-cb1f-44ef-a921-bc78be68f10d/minvodi.png",
     flag: ru,
     city: "Минеральные Воды",
     price: "Найти от 2 074 ₽",
@@ -58,7 +45,7 @@ const cards = [
     departure: "10 февраля"
   },
   {
-    img: simf,
+    img: "https://ucarecdn.com/e6672c0f-1e42-476e-8384-383e050581c7/krim.png",
     flag: ru,
     city: "Симферополь (Крым)",
     price: "Найти от 2 074 ₽",
@@ -66,7 +53,7 @@ const cards = [
     departure: "10 февраля"
   },
   {
-    img: bcn,
+    img: "https://ucarecdn.com/f9cb2a46-971b-44a8-af5a-056353a57755/barca.png",
     flag: sp,
     city: "Барселона",
     price: "Найти от 4 247 ₽",
@@ -116,31 +103,6 @@ const Section = styled.section`
   padding-top: 40px;
   padding-bottom: 40px;
   background: #f8fcff;
-`;
-
-const Icon = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 64px;
-  height: 64px;
-`;
-
-const Head = styled.h2`
-  margin-top: 24px;
-  margin-bottom: 32px;
-  font-weight: 500;
-  line-height: 24px;
-  font-size: 18px;
-  text-align: center;
-  color: #4a4a4a;
-`;
-
-const CitySearch = styled.button`
-  display: inline;
-  border: none;
-  background: transparent;
-  color: #00ace2;
 `;
 
 export default () => {
