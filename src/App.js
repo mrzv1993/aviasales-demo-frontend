@@ -13,6 +13,7 @@ import DownloadApp from "./DownloadApp";
 import Footer from "./Footer";
 
 import HeaderSP from "./HeaderSP";
+import Result from "./Result";
 
 const Page = styled.div`
   min-width: 320px;
@@ -35,6 +36,7 @@ const Main = () => (
 const Search = () => (
   <Page>
     <HeaderSP />
+    <Result />
   </Page>
 );
 
