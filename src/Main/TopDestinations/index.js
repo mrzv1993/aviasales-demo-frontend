@@ -6,8 +6,8 @@ import Category from "./Category";
 import compass from "./compass.svg";
 import edit from "./edit.svg";
 
-import ru from "../UI/Flags/ru.svg";
-import sp from "../UI/Flags/sp.svg";
+import ru from "../../UI/Flags/ru.svg";
+import sp from "../../UI/Flags/sp.svg";
 
 const cards = [
   {

@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
-import Footer from "../Footer";
-
 import russia from "./Card/russia-air.png";
 import fly from "./Card/fly.png";
 import nordwind from "./Card/nord-wind.png";
@@ -125,7 +123,6 @@ export default () => {
       <Card card={cards[4]} />
       <Card card={cards[5]} />
       <Card card={cards[6]} />
-      <Footer />
     </Result>
   );
 };

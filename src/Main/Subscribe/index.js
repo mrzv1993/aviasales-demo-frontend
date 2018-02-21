@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import line from "../assets/line.svg";
+import line from "../../assets/line.svg";
 
 import vk from "./vk.svg";
 import rss from "./rss.svg";
