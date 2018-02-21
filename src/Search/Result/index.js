@@ -89,12 +89,21 @@ const TopResult = styled.div`
   margin-bottom: 0.5rem;
 `;
 
+const Filters = styled.div`
+  background-color: white;
+  min-height: 500px;
+`;
+
 const Header = styled.h3`
   font-weight: 900;
   font-size: 0.875rem;
   color: #ffffff;
   padding: 0.5rem;
   margin: 0;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Cheapest = Header.extend`
@@ -112,18 +121,27 @@ const Best = Header.extend`
 export default () => {
   return (
     <Result>
-      <TopResult>
-        <Cheapest>Самый дешевый 🤑</Cheapest>
-        <Card card={cards[0]} />
-        <Fastest>Самый быстрый ⚡️</Fastest>
-        <Card card={cards[1]} />
-        <Best>Лучший билет 😍</Best>
-        <Card card={cards[2]} />
-      </TopResult>
-      <Card card={cards[3]} />
-      <Card card={cards[4]} />
-      <Card card={cards[5]} />
-      <Card card={cards[6]} />
+      <div className="container">
+        <div className="row">
+          <div class="hidden-xs hidden-sm hidden-md col-lg-4 col-xl-3">
+            <Filters />
+          </div>
+          <div class="col-sm-12 col-lg-8 col-xl-7">
+            <TopResult>
+              <Cheapest>Самый дешевый 🤑</Cheapest>
+              <Card card={cards[0]} />
+              <Fastest>Самый быстрый ⚡️</Fastest>
+              <Card card={cards[1]} />
+              <Best>Лучший билет 😍</Best>
+              <Card card={cards[2]} />
+            </TopResult>
+            <Card card={cards[3]} />
+            <Card card={cards[4]} />
+            <Card card={cards[5]} />
+            <Card card={cards[6]} />
+          </div>
+        </div>
+      </div>
     </Result>
   );
 };

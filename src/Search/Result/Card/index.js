@@ -16,6 +16,10 @@ const Card = styled.section`
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: 768px) {
+    border-radius: 4px;
+  }
 `;
 
 const Icon = styled.img`

@@ -10,12 +10,8 @@ import SpecOffers from "./SpecOffers";
 import MainArticles from "./MainArticles";
 import DownloadApp from "./DownloadApp";
 
-const Page = styled.div`
-  min-width: 320px;
-`;
-
 const Main = () => (
-  <Page>
+  <div>
     <Header />
     <TopDestinations />
     <BestPrice />
@@ -24,6 +20,6 @@ const Main = () => (
     <SpecOffers />
     <MainArticles />
     <DownloadApp />
-  </Page>
+  </div>
 );
 export default Main;

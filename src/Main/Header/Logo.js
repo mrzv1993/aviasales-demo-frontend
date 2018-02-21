@@ -3,17 +3,15 @@ import styled from "styled-components";
 
 import logo from "../../logo.svg";
 
-const Header = styled.div`
+const Logo = styled.div`
   display: flex;
-  padding: 0.75rem 0;
-  align-items: center;
 `;
 
 const LogoImg = styled.img`
   width: 2rem;
 `;
 
-const Logo = styled.span`
+const Txt = styled.span`
   display: none;
   margin-left: 0.75rem;
   color: #ffffff;
@@ -27,9 +25,9 @@ const Logo = styled.span`
 
 export default function() {
   return (
-    <Header>
+    <Logo>
       <LogoImg src={logo} alt="Aviasales" title="Aviasales" />
-      <Logo>aviasales</Logo>
-    </Header>
+      <Txt>aviasales</Txt>
+    </Logo>
   );
 }
