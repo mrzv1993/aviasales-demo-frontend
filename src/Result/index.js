@@ -3,6 +3,12 @@ import styled from "styled-components";
 import Card from "./Card";
 import Footer from "../Footer";
 
+import russia from "./Card/russia-air.png";
+import fly from "./Card/fly.png";
+import nordwind from "./Card/nord-wind.png";
+import nordair from "./Card/nord-air.png";
+import redwings from "./Card/red-wings.png";
+
 const Result = styled.section`
   background-color: #eaeaea;
 `;
@@ -10,6 +16,7 @@ const Result = styled.section`
 const cards = [
   {
     price: "7712 ₽",
+    logo: russia,
     timeTo: "00:05 — 03:05",
     totalTimeTo: "5 ч",
     timeFrom: "10:35 — 17:10",
@@ -19,6 +26,7 @@ const cards = [
   },
   {
     price: "9269 ₽",
+    logo: fly,
     timeTo: "07:30 — 09:50",
     totalTimeTo: "4 ч 20 м",
     timeFrom: "11:20 — 17:35",
@@ -28,6 +36,7 @@ const cards = [
   },
   {
     price: "8029 ₽",
+    logo: nordwind,
     timeTo: "00:15 — 03:10",
     timeFrom: "10:45 — 17:15",
     totalTimeTo: "4 ч 30 м",
@@ -37,6 +46,7 @@ const cards = [
   },
   {
     price: "8164 ₽",
+    logo: nordair,
     timeTo: "00:15 — 03:10",
     totalTimeTo: "4 ч 55 м",
     timeFrom: "10:45 — 17:15",
@@ -45,8 +55,8 @@ const cards = [
     directFrom: "Прямой"
   },
   {
-    title: "",
     price: "8240 ₽",
+    logo: redwings,
     timeTo: "07:00 — 09:30",
     totalTimeTo: "4 ч 30 м",
     timeFrom: "11:00 — 17:10",
@@ -56,6 +66,7 @@ const cards = [
   },
   {
     price: "9108 ₽",
+    logo: russia,
     timeTo: "00:05 — 03:05",
     totalTimeTo: "5 ч",
     timeFrom: "11:00 — 17:10",
@@ -65,6 +76,7 @@ const cards = [
   },
   {
     price: "9485 ₽",
+    logo: nordwind,
     timeTo: "00:05 — 03:05",
     totalTimeTo: "5 ч",
     timeFrom: "11:20 — 17:35",

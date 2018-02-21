@@ -9,6 +9,11 @@ const MarketPlaces = styled.div`
   list-style: none;
   justify-content: flex-end;
   margin-top: 1.5rem;
+  flex-flow: column;
+
+  @media (min-width: 576px) {
+    flex-flow: row;
+  }
 
   @media (min-width: 1200px) {
     margin-top: 0;
@@ -16,7 +21,12 @@ const MarketPlaces = styled.div`
 `;
 
 const StoreImg = styled.img`
-  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  @media (min-width: 576px) {
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+  }
 `;
 
 const AppStore = StoreImg.extend``;

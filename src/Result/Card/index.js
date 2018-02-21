@@ -1,21 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 
-const City = styled.p`
-  background-color: #eaeaea;
-`;
+import clock from "./clock.svg";
+import planeTo from "./plane-to.svg";
+import planeFrom from "./plane-from.svg";
 
 const Card = styled.section`
   background-color: #fff;
   display: flex;
   flex-flow: column;
   margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+`;
+
+const Icon = styled.img`
+  margin-right: 0.5rem;
 `;
 
 const PriceAvia = styled.div`
-  background-color: red;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0.75rem 0;
 `;
 
 const Price = styled.p`
@@ -40,7 +46,9 @@ const Direct = styled.div`
   text-align: right;
 `;
 
-const Logo = styled.img``;
+const Logos = styled.div``;
+
+const LogoAlone = styled.img``;
 
 const Info = styled.div`
   display: flex;
@@ -48,6 +56,7 @@ const Info = styled.div`
   font-weight: normal;
   line-height: 18px;
   font-size: 14px;
+  margin-bottom: 1rem;
 
   color: #4a4a4a;
 `;
@@ -57,26 +66,28 @@ export default props => {
     <Card href="#">
       <PriceAvia>
         <Price>{props.card.price}</Price>
-        <Logo src="" alt="asd" />
+        <Logos>
+          <LogoAlone src={props.card.logo} alt="asd" />
+        </Logos>
       </PriceAvia>
       <Info>
         <Time>
-          <img src="" alt="dd" />
+          <Icon src={planeTo} alt="Время в пути" />
           {props.card.timeTo}
         </Time>
         <TotalTime>
-          <img src="" alt="dd" />
+          <Icon src={clock} alt="Время в пути" />
           {props.card.totalTimeTo}
         </TotalTime>
         <Direct>{props.card.directTo}</Direct>
       </Info>
       <Info>
         <Time>
-          <img src="" alt="dd" />
+          <Icon src={planeFrom} alt="Время в пути" />
           {props.card.timeFrom}
         </Time>
         <TotalTime>
-          <img src="" alt="dd" />
+          <Icon src={clock} alt="Время в пути" />
           {props.card.totalTimeFrom}
         </TotalTime>
         <Direct>{props.card.directFrom}</Direct>
