@@ -67,6 +67,24 @@ const Value = styled.button`
   padding: 0.5rem 1.25rem;
   font-weight: 500;
   font-size: 1rem;
+  text-transform: uppercase;
+  color: #ffffff;
+`;
+
+const FilterButton = styled.button`
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  max-width: 160px;
+  background-color: #00ace2;
+  border: none;
+  border-radius: 100px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 900;
+  line-height: normal;
+  font-size: 1rem;
 
   color: #ffffff;
 `;
@@ -74,8 +92,9 @@ const Value = styled.button`
 export default function() {
   return (
     <Header>
+      <FilterButton>Фильтровать</FilterButton>
       <div className="container">
-        <div className="row hidden-sm hidden-md hidden-lg hidden-xl">
+        <div className="row ">
           <div className="col-xs-12">
             <NavBar>
               <Link to="/">
@@ -85,11 +104,11 @@ export default function() {
                 <Title>Москва — Барселона</Title>
                 <Date>24 фев — 3 март, 1 пассажир</Date>
               </Flight>
-              <Value>RUB</Value>
+              <Value>Rub</Value>
             </NavBar>
           </div>
         </div>
-        <div className="row hidden-xs">
+        <div className="row hidden-xs hidden-sm hidden-md hidden-lg hidden-xl">
           <div className="col-xs-12">
             <div>kjuj</div>
             <Value>RUB</Value>

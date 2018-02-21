@@ -11,6 +11,7 @@ const Card = styled.section`
   flex-flow: column;
   margin-bottom: 0.5rem;
   padding: 0 0.5rem;
+  box-shadow: 0px 4px 4px rgba(88, 149, 168, 0.08);
 
   &:last-child {
     margin-bottom: 0;
@@ -18,7 +19,7 @@ const Card = styled.section`
 `;
 
 const Icon = styled.img`
-  margin-right: 0.5rem;
+  margin-right: 0.35rem;
 `;
 
 const PriceAvia = styled.div`
@@ -43,6 +44,7 @@ const Time = styled.div`
 const TotalTime = styled.div`
   text-align: left;
   width: 30%;
+  padding-left: 0.5rem;
 `;
 
 const Direct = styled.div`
