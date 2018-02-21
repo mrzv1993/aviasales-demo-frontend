@@ -9,6 +9,7 @@ import redwings from "./Card/red-wings.png";
 
 const Result = styled.section`
   background-color: #eaeaea;
+  padding: 1rem 0;
 `;
 
 const cards = [
@@ -85,7 +86,7 @@ const cards = [
 ];
 
 const TopResult = styled.div`
-  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 `;
 
 const Header = styled.h3`

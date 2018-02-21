@@ -11,6 +11,10 @@ const Card = styled.section`
   flex-flow: column;
   margin-bottom: 0.5rem;
   padding: 0 0.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Icon = styled.img`
