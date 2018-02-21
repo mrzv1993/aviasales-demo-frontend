@@ -9,7 +9,6 @@ import Subscribe from "./Subscribe";
 import SpecOffers from "./SpecOffers";
 import MainArticles from "./MainArticles";
 import DownloadApp from "./DownloadApp";
-import Footer from "../Footer";
 
 const Page = styled.div`
   min-width: 320px;
@@ -25,7 +24,6 @@ const Main = () => (
     <SpecOffers />
     <MainArticles />
     <DownloadApp />
-    <Footer />
   </Page>
 );
 export default Main;

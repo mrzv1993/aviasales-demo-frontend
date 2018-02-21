@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import aero from "./aero.svg";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Button = styled.button`
   display: flex;
@@ -34,9 +35,11 @@ const Txt = styled.span`
 
 export default function() {
   return (
-    <Button>
-      <Txt>Найти билеты</Txt>
-      <img src={aero} alt="" />
-    </Button>
+    <Link to="/search">
+      <Button>
+        <Txt>Найти билеты</Txt>
+        <img src={aero} alt="" />
+      </Button>
+    </Link>
   );
 }

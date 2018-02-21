@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = styled.header`
@@ -30,7 +31,9 @@ export default function() {
       <div className="container">
         <div className="row hidden-sm hidden-md hidden-lg hidden-xl">
           <div className="col-xs-12">
-            <PrevPage>strelks</PrevPage>
+            <Link to="/">
+              <PrevPage>strelks</PrevPage>
+            </Link>
             <Flight>
               <Title>Москва — Барселона</Title>
               <Date>24 фев — 3 март, 1 пассажир</Date>
