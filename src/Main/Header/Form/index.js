@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import InputDepart from "./InputDepart";
 import InputComming from "./InputComming";
-
-import arrows from "./arrows.svg";
+import ButtonForward from "./ButtonForward";
+import ButtonReverse from "./ButtonReverse";
+import ButtonPassenger from "./ButtonPassenger";
+import ButtonSearch from "./ButtonSearch";
 
 const Form = styled.form`
     margin: 1.5rem auto 0 auto;
     width: 100%;
-    background-color: rgba(214, 41, 194, 0.35);
+  
 
     @media (min-width: 768px) {
         margin-top: 2.5rem;
@@ -18,27 +21,24 @@ const Form = styled.form`
 `;
 
 const Places = styled.div`
-  background-color: rgba(214, 41, 194, 0.35);
   @media (min-width: 768px) {
     display: inline-block;
     width: 100%;
   }
   @media (min-width: 1200px) {
     display: inline-block;
-    width: 39%;
+    width: 40%;
   }
 `;
 
 const DateRange = styled.div`
-  background-color: rgba(214, 41, 194, 0.35);
   @media (min-width: 768px) {
     display: inline-block;
-    width: 49%;
+    width: 50%;
   }
 `;
 
 const Service = styled.div`
-  background-color: rgba(214, 41, 194, 0.35);
   @media (min-width: 768px) {
     display: inline-block;
     width: 100%;
@@ -50,42 +50,47 @@ const Service = styled.div`
 `;
 
 const Passenger = styled.div`
-  background-color: rgba(214, 41, 194, 0.35);
   @media (min-width: 768px) {
     display: inline-block;
-    width: 49%;
+    width: 50%;
   }
 `;
 
 const Depart = styled.div`
-  background-color: rgba(214, 41, 194, 0.35);
   position: relative;
   @media (min-width: 768px) {
     display: inline-block;
-    width: 49%;
+    width: 50%;
   }
 `;
 const Comming = styled.div`
-  background-color: rgba(214, 41, 194, 0.35);
   @media (min-width: 768px) {
     display: inline-block;
-    width: 49%;
+    width: 50%;
   }
 `;
 
 const Forward = styled.div`
-  background-color: rgba(214, 41, 194, 0.35);
   @media (min-width: 768px) {
     display: inline-block;
-    width: 49%;
+    width: 50%;
   }
 `;
 
 const Reverse = styled.div`
-  background-color: rgba(214, 41, 194, 0.35);
   @media (min-width: 768px) {
     display: inline-block;
-    width: 49%;
+    width: 50%;
+  }
+`;
+
+const SearchBtn = styled.div`
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    margin-top: 3rem;
+    display: inline-block;
+    width: 50%;
   }
 `;
 
@@ -102,14 +107,22 @@ export default function() {
       </Places>
       <Service>
         <DateRange>
-          <Forward>3</Forward>
-          <Reverse>4</Reverse>
+          <Forward>
+            <ButtonForward />
+          </Forward>
+          <Reverse>
+            <ButtonReverse />
+          </Reverse>
         </DateRange>
         <Passenger>
-          <Forward>5</Forward>
+          <ButtonPassenger />
         </Passenger>
       </Service>
-      <Reverse>6</Reverse>
+      <SearchBtn>
+        <Link to="/search">
+          <ButtonSearch />
+        </Link>
+      </SearchBtn>
     </Form>
   );
 }

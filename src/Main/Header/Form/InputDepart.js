@@ -8,6 +8,7 @@ import arrows from "./arrows.svg";
 const Input = styled.input`
   border: none;
   padding: 1.15rem 1rem 1.2rem 1rem;
+  height: 56px;
   &:focus {
     box-shadow: 0 0 0 2pt #ff9241;
     outline: none;

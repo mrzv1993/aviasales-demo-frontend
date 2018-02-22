@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const Input = styled.input`
   border: none;
+  height: 56px;
   padding: 1.15rem 1rem 1.2rem 1rem;
   &:focus {
     box-shadow: 0 0 0 2pt #ff9241;
@@ -14,7 +15,7 @@ const Input = styled.input`
 
 const InputComing = Input.extend`
   width: 100%;
-  margin-top: 3px;
+  margin-top: 2px;
 
   @media (min-width: 768px) {
     margin-left: 2px;
