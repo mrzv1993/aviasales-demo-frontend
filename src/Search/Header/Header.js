@@ -135,7 +135,7 @@ export default function() {
       </div>
       <div className="row hidden-xs">
         <div className="col-xs-12">
-          <div className="row between-md end-md">
+          <div className="row between-sm end-sm">
             <div className="col-sm-6">
               <Logo />
             </div>

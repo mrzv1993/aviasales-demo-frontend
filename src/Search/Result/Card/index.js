@@ -8,13 +8,17 @@ import planeFrom from "./plane-from.svg";
 const Card = styled.section`
   background-color: #fff;
   display: flex;
+  margin: 0 -0.5rem 0.5rem -0.5rem;
   flex-flow: column;
-  margin-bottom: 0.5rem;
   padding: 0 0.5rem;
   box-shadow: 0px 4px 4px rgba(88, 149, 168, 0.08);
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 576px) {
+    margin: 0 0 0.5rem 0;
   }
 
   @media (min-width: 768px) {

@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
 import Card from "./Card";
+import SideBar from "../SideBar";
+
 import russia from "./Card/russia-air.png";
 import fly from "./Card/fly.png";
 import nordwind from "./Card/nord-wind.png";
@@ -99,7 +102,11 @@ const Header = styled.h3`
   font-size: 0.875rem;
   color: #ffffff;
   padding: 0.5rem;
-  margin: 0;
+  margin: 0 -0.5rem;
+
+  @media (min-width: 576px) {
+    margin: 0;
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -124,7 +131,7 @@ export default () => {
       <div className="container">
         <div className="row">
           <div class="hidden-xs hidden-sm hidden-md col-lg-4 col-xl-3">
-            <Filters />
+            <SideBar />
           </div>
           <div class="col-sm-12 col-lg-8 col-xl-7">
             <TopResult>

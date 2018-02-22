@@ -20,6 +20,9 @@ const FilterButton = styled.button`
   font-size: 1rem;
 
   color: #ffffff;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Search = () => (
