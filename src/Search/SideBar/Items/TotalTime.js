@@ -124,22 +124,9 @@ export default () => {
           Барселона
         </SubTitle>
         <Info>
-          <DepartTitle>Вылет из Москвы:</DepartTitle>
           <Time>
-            <Depart>c 00:05, 24 фев</Depart>
-            <Comming>до 23:45, 24 фев</Comming>
-          </Time>
-          <Range>
-            <CircleLeft />
-            <CircleRight />
-            <Line />
-          </Range>
-        </Info>
-        <Info>
-          <CommingTitle>Прибытие в Барселону:</CommingTitle>
-          <Time>
-            <Depart>c 00:05, 24 фев</Depart>
-            <Comming>до 23:45, 24 фев</Comming>
+            <Depart>от 04ч 20м</Depart>
+            <Comming>до 48ч 50м</Comming>
           </Time>
           <Range>
             <CircleLeft />
@@ -155,22 +142,9 @@ export default () => {
           Москва
         </SubTitle>
         <Info>
-          <DepartTitle>Вылет из Барселоны:</DepartTitle>
           <Time>
-            <Depart>c 00:05, 24 фев</Depart>
-            <Comming>до 23:45, 24 фев</Comming>
-          </Time>
-          <Range>
-            <CircleLeft />
-            <CircleRight />
-            <Line />
-          </Range>
-        </Info>
-        <Info>
-          <CommingTitle>Прибытие в Москву:</CommingTitle>
-          <Time>
-            <Depart>c 00:05, 24 фев</Depart>
-            <Comming>до 23:45, 24 фев</Comming>
+            <Depart>от 04ч 10м</Depart>
+            <Comming>до 41ч 20м</Comming>
           </Time>
           <Range>
             <CircleLeft />

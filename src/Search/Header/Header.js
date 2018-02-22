@@ -98,24 +98,6 @@ const Menu = styled.button`
   border: none;
 `;
 
-const FilterButton = styled.button`
-  position: fixed;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  bottom: 1rem;
-  max-width: 160px;
-  background-color: #00ace2;
-  border: none;
-  border-radius: 100px;
-  padding: 0.75rem 1.25rem;
-  font-weight: 900;
-  line-height: normal;
-  font-size: 1rem;
-
-  color: #ffffff;
-`;
-
 export default function() {
   return (
     <Header>

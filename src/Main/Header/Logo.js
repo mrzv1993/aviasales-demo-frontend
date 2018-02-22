@@ -14,10 +14,9 @@ const LogoImg = styled.img`
 const Txt = styled.span`
   display: none;
   margin-left: 0.75rem;
-  color: #ffffff;
   font-weight: 300;
   font-size: 20px;
-
+  color: #ffffff;
   @media (min-width: 768px) {
     display: block;
   }
