@@ -101,7 +101,7 @@ const Menu = styled.button`
 export default function() {
   return (
     <Header>
-      <div className="row hidden-sm hidden-md hidden-lg hidden-xl">
+      <div className="row hidden-md hidden-lg hidden-xl">
         <div className="col-xs-12">
           <NavBar>
             <Link to="/">
@@ -115,7 +115,7 @@ export default function() {
           </NavBar>
         </div>
       </div>
-      <div className="row hidden-xs">
+      <div className="row hidden-xs hidden-sm">
         <div className="col-xs-12">
           <div className="row between-sm end-sm">
             <div className="col-sm-6">

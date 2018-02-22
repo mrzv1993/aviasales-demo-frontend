@@ -3,6 +3,9 @@ import DayPicker from "react-day-picker";
 import "react-day-picker/lib/style.css";
 import styled from "styled-components";
 
+import InputDepart from "../../Main/Header/Form/InputDepart";
+import InputComming from "../../Main/Header/Form/InputComming";
+
 const Form = styled.form`
   background-color: rgba(214, 41, 194, 0.35);
 `;
@@ -83,14 +86,16 @@ const Reverse = styled.div`
 const Search = () => (
   <Form>
     <Places>
-      <Depart>1</Depart>
-      <Comming>2</Comming>
+      <Depart>
+        <InputDepart />
+      </Depart>
+      <Comming>
+        <InputComming />
+      </Comming>
     </Places>
     <Service>
       <DateRange>
-        <Forward>
-          <DayPicker />
-        </Forward>
+        <Forward />
         <Reverse>4</Reverse>
       </DateRange>
       <Passenger>

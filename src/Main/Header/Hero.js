@@ -50,7 +50,11 @@ export default function() {
     <Hero>
       <Title>Поиск дешевых авиабилетов</Title>
       <SubTitle>Лучший способ купить авиабилеты дешево</SubTitle>
-      <Form />
+      <div className="row center-md">
+        <div className="col-md-10">
+          <Form />
+        </div>
+      </div>
     </Hero>
   );
 }
