@@ -2,14 +2,25 @@ import React from "react";
 import styled from "styled-components";
 
 import clock from "./clock.svg";
-import planeTo from "./plane-to.svg";
-import planeFrom from "./plane-from.svg";
 import share from "./share.svg";
+import arrow from "./arrow.svg";
+import pin from "./pin.svg";
+import planeFxs from "./plane-forward-xs.svg";
+import planeRxs from "./plane-reverse-xs.svg";
+import planeRmd from "./plane-reverse-md.svg";
+import planeFmd from "./plane-forward-md.svg";
 
 const Card = styled.div`
   display: flex;
-  background-color: #eeffff;
-  margin-top: 0.5rem;
+  background-color: #fff;
+  margin: 0 -8px 0 -8px;
+  margin-bottom: 0.5rem;
+
+  @media screen and (min-width: 576px) {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
   @media screen and (min-width: 768px) {
     border-radius: 4px;
   }
@@ -22,22 +33,23 @@ const LeftColumn = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    flex: 1 1 15%;
     padding: 5px;
     background-color: #fff;
-    min-width: 208px;
+    min-width: 198px;
   }
 `;
 
 const RightColumn = styled.div`
-  flex: 1 1 75%;
-  padding: 5px;
-  flewx-basis: 75%;
+  flex: 1 1 100%;
   display: flex;
   flex-direction: column;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
 
   @media screen and (min-width: 768px) {
     border-left: 1px solid #dddddd;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
   }
 `;
 
@@ -82,14 +94,19 @@ const ButtonOffer = styled.button`
 
 const Price = styled.div`
   font-weight: bold;
-  color: orange;
+  line-height: normal;
+  font-size: 22px;
   text-align: left;
-  font-weight: 500;
-  line-height: 18px;
-  font-size: 16px;
+  color: #ff9241;
 
-  color: #ff6d00;
   @media screen and (min-width: 768px) {
+    font-weight: bold;
+
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 16px;
+
+    color: #ff6d00;
     text-align: center;
     background: #ff6d00;
     border-radius: 4px;
@@ -122,8 +139,13 @@ const LeftTicket = styled.div`
 
 const PriceCarrier = styled.div`
   display: flex;
-  background-color: #aaaaff;
   align-items: center;
+  margin: 0.5rem 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+    margin: 0;
+  }
 `;
 
 const PriceContainer = styled.div`
@@ -144,7 +166,7 @@ const AirLogoWrap = styled.div`
 
 const AirLogo = styled.img``;
 
-const Text = styled.span`
+const TextPrice = styled.span`
   display: none;
   font-weight: 500;
   font-size: 1rem;
@@ -158,23 +180,17 @@ const Text = styled.span`
 `;
 
 const RigthButton = styled.div`
-  background-color: #000;
   width: 20px;
   display: none;
+  background-image: url(${arrow});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #edf5f7;
 
   @media screen and (min-width: 768px) {
     display: block;
   }
 `;
-
-const WrapTime = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-const DepartTime = WrapTime.extend``;
-
-const CommingTime = WrapTime.extend``;
 
 const BadgesAndShare = styled.div`
   display: none;
@@ -200,65 +216,279 @@ const Share = styled.button`
   background-position: center;
   border: none;
   background-color: transparent;
-  margin: 0 0.5rem;
+  margin-left: 0.5rem;
+  width: 18px;
 `;
 
-const StartTime = styled.div`
-  background-color: #678873;
-  width: 25%;
-  line-height: 18px;
-  font-size: 14px;
-  color: #4a4a4a;
+const WrapTime = styled.div`
+  display: flex;
+  align-items: stretch;
 
   @media screen and (min-width: 768px) {
-    line-height: 40px;
-    font-size: 28px;
-    text-align: right;
-    color: #323333;
-    width: 20%;
+    margin-top: 1rem;
   }
 `;
 
-const EndTime = styled.div`
-  background-color: #678873;
-  width: 25%;
-  line-height: 18px;
-  font-size: 14px;
-  color: #4a4a4a;
+const DepartTime = WrapTime.extend`
+  display: flex;
+  padding: 0.25rem 0;
 
   @media screen and (min-width: 768px) {
-    line-height: 40px;
-    font-size: 28px;
-    text-align: right;
-    color: #323333;
-    width: 20%;
+    border-bottom: 1px dashed #afbec6;
+    padding: 0.75rem 0;
   }
 `;
+
+// Веремя вылета Начало
+
+const Start = styled.div`
+  order: 1;
+  width: 25%;
+  max-width: 80px;
+  display: flex;
+  flex-flow: column;
+
+  @media screen and (min-width: 768px) {
+    max-width: 25%;
+  }
+`;
+
+const Time = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    height: 40%;
+    line-height: 40px;
+    font-size: 28px;
+    color: #323333;
+  }
+`;
+
+const TimeStart = Time.extend``;
+
+const TimeFinish = Time.extend`
+  justify-content: flex-start;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
+`;
+
+const Def = styled.span`
+  display: inline;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const Pin = styled.img`
+  display: none;
+  @media screen and (min-width: 768px) {
+    margin-right: 0.5rem;
+    display: block;
+  }
+`;
+
+const Info = styled.div`
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 60%;
+  }
+`;
+
+const InfoStart = Info.extend`
+  text-align: left;
+`;
+
+const InfoFinish = Info.extend`
+  text-align: right;
+`;
+
+const City = styled.p`
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  font-size: 12px;
+  color: #9ca5a8;
+  margin: 0;
+  margin-top: 0.5rem;
+`;
+
+const Date = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  font-size: 12px;
+  color: #9ca5a8;
+  margin: 0;
+`;
+
+// Веремя вылета Конец
+
+// Время прибытия Начало
+
+const Finish = styled.div`
+  order: 2;
+  width: 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    order: 3;
+  }
+`;
+
+// Время прибытия Конец
+
+//  Общее время начало
 
 const TotalTimeWrap = styled.div`
-  background-color: #435188;
+  order: 3;
   width: 25%;
-
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   @media screen and (min-width: 768px) {
-    width: 60%;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    width: 50%;
+    order: 2;
   }
 `;
 
 const TotalTime = styled.div`
   display: flex;
-  line-height: 18px;
-  font-size: 12px;
-  text-align: center;
-  color: #a0b0b9;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
 `;
 
-const Direct = styled.div`
-  background-color: #678873;
-  width: 25%;
-  text-align: right;
-  padding-right: 0.5rem;
+const Count = styled.p`
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  font-size: 14px;
+  margin: 0;
+  color: #4a4a4a;
+`;
+
+const All = styled.span`
+  display: none;
 
   @media screen and (min-width: 768px) {
+    display: inline;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    font-size: 14px;
+
+    color: #4a4a4a;
+  }
+`;
+
+const PlaneMd = styled.img`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+`;
+
+const PlaneXs = styled.img`
+  display: block;
+  margin-right: 0.5rem;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const Clock = styled.img`
+  display: inline-block;
+  margin-right: 0.25rem;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const Line = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    height: 1px;
+    background-color: #a0b0b9;
+  }
+`;
+
+const Airports = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    height: 60%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+`;
+
+const Airport = styled.div`
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  height: 100%;
+  border: none;
+  padding-top: 2rem;
+  font-weight: 500;
+  line-height: 18px;
+  font-size: 11px;
+
+  color: #4a4a4a;
+`;
+
+const AirportOne = Airport.extend`
+  align-items: flex-start;
+`;
+
+const AirportTwo = Airport.extend`
+  align-items: flex-end;
+`;
+
+const Circle = styled.div`
+  position: absolute;
+  top: -9px;
+  border: 1px solid #a0b0b9;
+  height: 11px;
+  width: 11px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #fff;
+`;
+
+//  Общее время Конец
+
+const Direct = styled.div`
+  order: 4;
+  width: calc(25% + 80px);
+  text-align: right;
+  line-height: 18px;
+  font-size: 14px;
+  text-align: right;
+
+  color: #4a4a4a;
+
+  @media screen and (min-width: 768px) {
+    order: 2;
     display: none;
   }
 `;
@@ -268,25 +498,25 @@ export default props => {
     <Card>
       <LeftColumn>
         <Baggage src={props.card.baggage} />
-        <LeftTicket>Осталось 4 билета</LeftTicket>
+        <LeftTicket>{props.card.leftTicket}</LeftTicket>
         <Price>
-          <Text>
+          <TextPrice>
             Купить<br /> за{" "}
-          </Text>
+          </TextPrice>
           {props.card.price}
         </Price>
 
-        <Partner>Clickavia</Partner>
+        <Partner>на {props.card.partner}</Partner>
         <Offers>
           <Offer>
-            <AirOffer>Svyaznoy Travel</AirOffer>
-            <PriceOffer>9 275 ₽</PriceOffer>
+            <AirOffer>{props.card.offerAirFirst}</AirOffer>
+            <PriceOffer>{props.card.offerPriceFirst}</PriceOffer>
           </Offer>
           <Offer>
-            <AirOffer>Билетик Аэро</AirOffer>
-            <PriceOffer>9 587 ₽</PriceOffer>
+            <AirOffer>{props.card.offerAirSecond}</AirOffer>
+            <PriceOffer>{props.card.offerPriceSecond}</PriceOffer>
           </Offer>
-          <ButtonOffer>+ Еще 4 предложения</ButtonOffer>
+          <ButtonOffer>{props.card.offerButton}</ButtonOffer>
         </Offers>
       </LeftColumn>
 
@@ -303,24 +533,93 @@ export default props => {
             <Share />
           </BadgesAndShare>
         </PriceCarrier>
+
         <DepartTime>
-          <StartTime> 07:30</StartTime>
-          <EndTime>09:50 </EndTime>
+          <Start>
+            <TimeStart>
+              <Pin src={pin} alt="gby" />
+              <PlaneXs src={planeFxs} alt="gby" />
+              00:05&nbsp;<Def>–</Def>
+            </TimeStart>
+            <InfoStart>
+              <City>Москва</City>
+              <Date>24 фев 2018, Сб</Date>
+            </InfoStart>
+          </Start>
           <TotalTimeWrap>
             <TotalTime>
-              <img src="" alt="взлет" />
-              <p> Всего: 4ч 55м</p>
-              <img src="" alt="посадка" />
+              <PlaneMd src={planeRmd} alt="1" />
+              <Count>
+                <Clock src={clock} alt="1" />
+                <All>Всего:&nbsp;</All>
+                {props.card.totalTimeTo}
+              </Count>
+              <PlaneMd src={planeFmd} alt="1" />
             </TotalTime>
+            <Line />
+            <Airports>
+              <AirportOne>
+                <Circle />
+                VVS
+              </AirportOne>
+              <AirportTwo>
+                <Circle />
+                VVS
+              </AirportTwo>
+            </Airports>
           </TotalTimeWrap>
-          <Direct> Прямой</Direct>
+          <Finish>
+            <TimeFinish>03:05</TimeFinish>
+            <InfoFinish>
+              <City>Барселона</City>
+              <Date>24 фев 2018, Сб</Date>
+            </InfoFinish>
+          </Finish>
+          <Direct>Прямой</Direct>
         </DepartTime>
-        <CommingTime>
-          <StartTime> 07:30</StartTime>
-          <EndTime>09:50 </EndTime>
-          <TotalTime>4 ч 20 м </TotalTime>
-          <Direct> Прямой</Direct>
-        </CommingTime>
+        <DepartTime>
+          <Start>
+            <Time>
+              <Pin src={pin} alt="gby" />
+              <PlaneXs src={planeFxs} alt="gby" />
+              00:05
+            </Time>
+            <InfoStart>
+              <City>Москва</City>
+              <Date>24 фев 2018, Сб</Date>
+            </InfoStart>
+          </Start>
+          <TotalTimeWrap>
+            <TotalTime>
+              <PlaneMd src={planeRmd} alt="1" />
+              <Count>
+                <Clock src={clock} alt="1" />
+                <All>Всего:&nbsp;</All>
+                {props.card.totalTimeTo}
+              </Count>
+              <PlaneMd src={planeFmd} alt="1" />
+            </TotalTime>
+            <Line />
+            <Airports>
+              <AirportOne>
+                <Circle />
+                VVS
+              </AirportOne>
+              <AirportTwo>
+                <Circle />
+                VVS
+              </AirportTwo>
+            </Airports>
+          </TotalTimeWrap>
+          <Finish>
+            <TimeFinish>03:05</TimeFinish>
+            <InfoFinish>
+              <City>Барселона</City>
+              <Date>24 фев 2018, Сб</Date>
+            </InfoFinish>
+          </Finish>
+          <Direct>Прямой</Direct>
+        </DepartTime>
       </RightColumn>
 
       <RigthButton />

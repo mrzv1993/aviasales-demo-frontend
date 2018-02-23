@@ -19,7 +19,9 @@ const Result = styled.section`
 const cards = [
   {
     baggage: baggage,
+    leftTicket: "",
     price: "7712 ₽",
+    partner: "Clickavia",
     logo: russia,
     timeTo: "00:05 — 03:05",
     totalTimeTo: "5 ч",
@@ -30,7 +32,9 @@ const cards = [
   },
   {
     baggage: baggage,
+    leftTicket: "",
     price: "9269 ₽",
+    partner: "Билетик Аэро",
     logo: fly,
     timeTo: "07:30 — 09:50",
     totalTimeTo: "4 ч 20 м",
@@ -41,7 +45,9 @@ const cards = [
   },
   {
     baggage: baggage,
+    leftTicket: "",
     price: "8029 ₽",
+    partner: "Aviakassa",
     logo: nordwind,
     timeTo: "00:15 — 03:10",
     timeFrom: "10:45 — 17:15",
@@ -52,7 +58,9 @@ const cards = [
   },
   {
     baggage: baggage,
+    leftTicket: "",
     price: "8164 ₽",
+    partner: "Билетик Аэро",
     logo: nordair,
     timeTo: "00:15 — 03:10",
     totalTimeTo: "4 ч 55 м",
@@ -63,7 +71,14 @@ const cards = [
   },
   {
     baggage: baggage,
+    leftTicket: "Осталось 4 билета",
     price: "8240 ₽",
+    partner: "Clickavia",
+    offerAirFirst: "Svyaznoy Travel",
+    offerAirSecond: "Билетик Аэро",
+    offerPriceFirst: "9 275 ₽",
+    offerPriceSecond: "9 587 ₽",
+    offerButton: "+ Еще 4 предложения",
     logo: redwings,
     timeTo: "07:00 — 09:30",
     totalTimeTo: "4 ч 30 м",
@@ -74,7 +89,9 @@ const cards = [
   },
   {
     baggage: baggage,
+    leftTicket: "",
     price: "9108 ₽",
+    partner: "Aviakassa",
     logo: russia,
     timeTo: "00:05 — 03:05",
     totalTimeTo: "5 ч",
@@ -85,7 +102,9 @@ const cards = [
   },
   {
     baggage: baggage,
+    leftTicket: "",
     price: "9485 ₽",
+    partner: "Aviakassa",
     logo: nordwind,
     timeTo: "00:05 — 03:05",
     totalTimeTo: "5 ч",
@@ -98,11 +117,6 @@ const cards = [
 
 const TopResult = styled.div`
   margin-bottom: 0.5rem;
-`;
-
-const Filters = styled.div`
-  background-color: white;
-  min-height: 500px;
 `;
 
 const Header = styled.h3`
