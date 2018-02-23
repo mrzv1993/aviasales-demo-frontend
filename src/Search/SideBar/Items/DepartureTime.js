@@ -1,4 +1,5 @@
 import React from "react";
+
 import styled from "styled-components";
 
 import arrow from "./arrow.svg";
@@ -126,7 +127,7 @@ export default () => {
         <Info>
           <DepartTitle>Вылет из Москвы:</DepartTitle>
           <Time>
-            <Depart>c 00:05, 24 фев</Depart>
+            <Depart>до 23:45, 24 фев</Depart>
             <Comming>до 23:45, 24 фев</Comming>
           </Time>
           <Range>

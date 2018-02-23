@@ -9,6 +9,7 @@ import fly from "./Card/fly.png";
 import nordwind from "./Card/nord-wind.png";
 import nordair from "./Card/nord-air.png";
 import redwings from "./Card/red-wings.png";
+import baggage from "./Card/baggage.svg";
 
 const Result = styled.section`
   background-color: #eaeaea;
@@ -17,6 +18,7 @@ const Result = styled.section`
 
 const cards = [
   {
+    baggage: baggage,
     price: "7712 ₽",
     logo: russia,
     timeTo: "00:05 — 03:05",
@@ -27,6 +29,7 @@ const cards = [
     directFrom: "Прямой"
   },
   {
+    baggage: baggage,
     price: "9269 ₽",
     logo: fly,
     timeTo: "07:30 — 09:50",
@@ -37,6 +40,7 @@ const cards = [
     directFrom: "CDG"
   },
   {
+    baggage: baggage,
     price: "8029 ₽",
     logo: nordwind,
     timeTo: "00:15 — 03:10",
@@ -47,6 +51,7 @@ const cards = [
     directFrom: "Прямой"
   },
   {
+    baggage: baggage,
     price: "8164 ₽",
     logo: nordair,
     timeTo: "00:15 — 03:10",
@@ -57,6 +62,7 @@ const cards = [
     directFrom: "Прямой"
   },
   {
+    baggage: baggage,
     price: "8240 ₽",
     logo: redwings,
     timeTo: "07:00 — 09:30",
@@ -67,6 +73,7 @@ const cards = [
     directFrom: "Прямой"
   },
   {
+    baggage: baggage,
     price: "9108 ₽",
     logo: russia,
     timeTo: "00:05 — 03:05",
@@ -77,6 +84,7 @@ const cards = [
     directFrom: "Прямой"
   },
   {
+    baggage: baggage,
     price: "9485 ₽",
     logo: nordwind,
     timeTo: "00:05 — 03:05",
