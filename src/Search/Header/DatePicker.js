@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import DayPicker from "react-day-picker";
+import DayPicker, { DateUtils } from "react-day-picker";
 import { format } from "date-fns";
 import ruLocale from "date-fns/locale/ru";
 import { withClickOutside } from "react-clickoutside";
 import "./datepicker.css";
 
 import calendar from "../../Main/Header/Form/calendar.svg";
+import CheckOneDirection from "./CheckOneDirection";
 
 const DateSelect = styled.div`
   cursor: pointer;
@@ -84,10 +85,6 @@ const Departures = InputWrapper.extend`
 
 const Arrival = InputWrapper.extend`
   position: relative;
-`;
-
-const CheckOneDirection = styled.div`
-  padding: 18px 26px;
 `;
 
 const WEEKDAYS_SHORT = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];

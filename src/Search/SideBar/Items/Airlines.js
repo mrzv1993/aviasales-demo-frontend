@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import arrow from "./arrow.svg";
-import clear from "./clear.svg";
-import check from "./check.svg";
 import checked from "./checked.svg";
 
 const Transfer = styled.div`
@@ -90,16 +88,17 @@ const BrusselsAirlines = CheckboxItem.extend``;
 
 const BulgariaAir = CheckboxItem.extend``;
 
-const Checkbox = styled.div`
+const Checkbox = styled.label`
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 12px;
   color: #4a4a4a;
   flex-wrap: wrap;
+  cursor: pointer;
 `;
 
-const Check = styled.img`
+const Check = styled.input`
   margin-right: 0.5rem;
 `;
 
@@ -128,7 +127,7 @@ export default () => {
       <Checkboxes>
         <Checkbox>
           <Several>
-            <Check src={check} alt="checkbox" />
+            <Check type="checkbox" value="Одна пересадка" />
             Несколько авиакомпаний
           </Several>
           <Info>
@@ -141,7 +140,7 @@ export default () => {
           <SubTitle>Альянсы</SubTitle>
           <Checkbox>
             <All>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Все
             </All>
             <Price>7 712 ₽</Price>
@@ -149,7 +148,7 @@ export default () => {
 
           <Checkbox>
             <StarAlliance>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Star Alliance
             </StarAlliance>
             <Price>11 150 ₽</Price>
@@ -157,7 +156,7 @@ export default () => {
 
           <Checkbox>
             <OneWorld>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               OneWorld
             </OneWorld>
             <Price>12 370 ₽</Price>
@@ -165,7 +164,7 @@ export default () => {
 
           <Checkbox>
             <SkyTeam>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               SkyTeam
             </SkyTeam>
             <Price>16 290 ₽</Price>
@@ -176,7 +175,7 @@ export default () => {
           <SubTitle>Авиакомпании</SubTitle>
           <Checkbox>
             <All>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Все
             </All>
             <Price>7 712 ₽</Price>
@@ -184,7 +183,7 @@ export default () => {
 
           <Checkbox>
             <AegeanAirlines>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Aegean Airlines
             </AegeanAirlines>
             <Price>20 357 ₽</Price>
@@ -192,7 +191,7 @@ export default () => {
 
           <Checkbox>
             <AirAlgerie>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Air Algerie
             </AirAlgerie>
             <Price>29 105 ₽</Price>
@@ -200,7 +199,7 @@ export default () => {
 
           <Checkbox>
             <AirEuropa>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Air Europa
             </AirEuropa>
             <Price>22 202 ₽</Price>
@@ -208,7 +207,7 @@ export default () => {
 
           <Checkbox>
             <AirFrance>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Air France
             </AirFrance>
             <Price>17 050 ₽</Price>
@@ -216,7 +215,7 @@ export default () => {
 
           <Checkbox>
             <AirMoldova>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Air Moldova
             </AirMoldova>
             <Price>22 613 ₽</Price>
@@ -224,7 +223,7 @@ export default () => {
 
           <Checkbox>
             <Alitalia>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Alitalia
             </Alitalia>
             <Price>22 717 ₽</Price>
@@ -232,7 +231,7 @@ export default () => {
 
           <Checkbox>
             <AlitaliaCityLiner>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Alitalia CityLiner
             </AlitaliaCityLiner>
             <Price>20 271 ₽</Price>
@@ -240,7 +239,7 @@ export default () => {
 
           <Checkbox>
             <BelleAir>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Belle Air
             </BelleAir>
             <Price>18 371 ₽</Price>
@@ -248,7 +247,7 @@ export default () => {
 
           <Checkbox>
             <BritishAirways>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               British Airways
             </BritishAirways>
             <Price>23 839 ₽</Price>
@@ -256,7 +255,7 @@ export default () => {
 
           <Checkbox>
             <BrusselsAirlines>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Brussels Airlines
             </BrusselsAirlines>
             <Price>11 150 ₽</Price>
@@ -264,7 +263,7 @@ export default () => {
 
           <Checkbox>
             <BulgariaAir>
-              <Check src={checked} alt="checkbox" />
+              <Check type="checkbox" value="Одна пересадка" />
               Bulgaria Air
             </BulgariaAir>
             <Price>20 114 ₽</Price>

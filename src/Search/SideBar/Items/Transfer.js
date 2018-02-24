@@ -3,8 +3,6 @@ import styled from "styled-components";
 
 import arrow from "./arrow.svg";
 import clear from "./clear.svg";
-import check from "./check.svg";
-import checked from "./checked.svg";
 
 const Transfer = styled.div`
   padding: 0.75rem 1rem;
@@ -52,15 +50,16 @@ const TwoTransfer = CheckboxItem.extend``;
 
 const ThreeTransfer = CheckboxItem.extend``;
 
-const Checkbox = styled.div`
+const Checkbox = styled.label`
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 12px;
   color: #4a4a4a;
+  cursor: pointer;
 `;
 
-const Check = styled.img`
+const Check = styled.input`
   margin-right: 0.5rem;
 `;
 
@@ -81,14 +80,14 @@ export default () => {
       <Checkboxes>
         <Checkbox>
           <All>
-            <Check src={check} alt="checkbox" />
+            <Check type="checkbox" value="Все" />
             Все
           </All>
         </Checkbox>
 
         <Checkbox>
           <WhitoutTransfer>
-            <Check src={checked} alt="checkbox" />
+            <Check type="checkbox" value="Без пересадок" />
             Без пересадок
           </WhitoutTransfer>
           <Price>7 712 ₽</Price>
@@ -96,7 +95,7 @@ export default () => {
 
         <Checkbox>
           <OneTransfer>
-            <Check src={check} alt="checkbox" />
+            <Check type="checkbox" value="Одна пересадка" />
             Одна пересадка
           </OneTransfer>
           <Price>11 150 ₽</Price>
@@ -104,7 +103,7 @@ export default () => {
 
         <Checkbox>
           <TwoTransfer>
-            <Check src={check} alt="checkbox" />
+            <Check type="checkbox" value="Две пересадки" />
             Две пересадки
           </TwoTransfer>
           <Price>16 821 ₽</Price>
@@ -112,7 +111,7 @@ export default () => {
 
         <Checkbox>
           <ThreeTransfer>
-            <Check src={check} alt="checkbox" />
+            <Check type="checkbox" value="Три пересадки" />
             Три пересадки
           </ThreeTransfer>
           <Price>23 986 ₽</Price>
