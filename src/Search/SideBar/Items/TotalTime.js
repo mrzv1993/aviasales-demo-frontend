@@ -4,6 +4,9 @@ import styled from "styled-components";
 import arrow from "./arrow.svg";
 import air from "./air.svg";
 
+import { Range } from "rc-slider";
+import "./range.css";
+
 const DepartureTime = styled.div`
   padding: 1.5rem 1rem 2rem 1rem;
   border-top: 1px solid #dddddd;
@@ -81,10 +84,6 @@ const Comming = styled.p`
   margin: 0;
 `;
 
-const Range = styled.div`
-  position: relative;
-`;
-
 const Circle = styled.div`
   width: 1rem;
   height: 1rem;
@@ -92,22 +91,6 @@ const Circle = styled.div`
   border: 1px solid #d6d9da;
   border-radius: 50px;
   position: absolute;
-`;
-
-const CircleLeft = Circle.extend`
-  top: -7px;
-  left: 0;
-`;
-
-const CircleRight = Circle.extend`
-  top: -7px;
-  right: 0;
-`;
-
-const Line = styled.div`
-  height: 2px;
-  background-color: #00acde;
-  border-radius: 2px;
 `;
 
 export default () => {
@@ -128,11 +111,7 @@ export default () => {
             <Depart>от 04ч 20м</Depart>
             <Comming>до 48ч 50м</Comming>
           </Time>
-          <Range>
-            <CircleLeft />
-            <CircleRight />
-            <Line />
-          </Range>
+          <Range allowCross={false} defaultValue={[0, 100]} />
         </Info>
       </Flight>
       <Flight>
@@ -146,11 +125,7 @@ export default () => {
             <Depart>от 04ч 10м</Depart>
             <Comming>до 41ч 20м</Comming>
           </Time>
-          <Range>
-            <CircleLeft />
-            <CircleRight />
-            <Line />
-          </Range>
+          <Range allowCross={false} defaultValue={[0, 100]} />
         </Info>
       </Flight>
     </DepartureTime>

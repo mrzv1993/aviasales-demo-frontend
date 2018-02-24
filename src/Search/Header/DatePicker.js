@@ -5,12 +5,12 @@ import DayPicker from "react-day-picker";
 import { format } from "date-fns";
 import ruLocale from "date-fns/locale/ru";
 import { withClickOutside } from "react-clickoutside";
-import "react-day-picker/lib/style.css";
 import "./datepicker.css";
 
 import calendar from "../../Main/Header/Form/calendar.svg";
 
 const DateSelect = styled.div`
+  cursor: pointer;
   flex-basis: 50%;
 `;
 const CalendarImg = styled.img`
@@ -38,7 +38,7 @@ const InputWrapper = styled.div`
   display: flex;
   align-items: center;
   background: #fff;
-  margin: 1px;
+  cursor: pointer;
 `;
 
 const Layout = styled.div`
@@ -62,9 +62,8 @@ const DateFields = Layout.extend`
 const Picker = styled.div`
   background: #fff;
   border: none;
-  border-radius: 5px;
   position: absolute;
-  z-index: 9;
+  z-index: 10;
   top: 0;
   left: 0;
   box-shadow: 0px 0px 8px rgba(74, 74, 74, 0.2),
@@ -75,7 +74,8 @@ const Picker = styled.div`
 const Departures = InputWrapper.extend`
   position: relative;
   @media (min-width: 768px) {
-    border-bottom-left-radius: 2px;
+    border-bottom-left-radius: 4px;
+    margin-right: 2px;
   }
   @media (min-width: 1200px) {
     border-bottom-left-radius: 0px;
@@ -84,18 +84,6 @@ const Departures = InputWrapper.extend`
 
 const Arrival = InputWrapper.extend`
   position: relative;
-`;
-
-const ButtonAction = styled.button`
-  background: transparent;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 18px;
-  right: 16px;
 `;
 
 const CheckOneDirection = styled.div`
@@ -196,7 +184,8 @@ export default class DatePicker extends Component {
       fontSize: 18,
       fontWeight: 700,
       width: 40,
-      height: 20
+      height: 20,
+      color: "#4A4A4A"
     };
     const priceStyle = {
       fontSize: "10px",

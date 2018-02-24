@@ -1,6 +1,8 @@
 import React from "react";
-
 import styled from "styled-components";
+
+import { Range } from "rc-slider";
+import "./range.css";
 
 import arrow from "./arrow.svg";
 import air from "./air.svg";
@@ -82,35 +84,6 @@ const Comming = styled.p`
   margin: 0;
 `;
 
-const Range = styled.div`
-  position: relative;
-`;
-
-const Circle = styled.div`
-  width: 1rem;
-  height: 1rem;
-  background-color: #ffffff;
-  border: 1px solid #d6d9da;
-  border-radius: 50px;
-  position: absolute;
-`;
-
-const CircleLeft = Circle.extend`
-  top: -7px;
-  left: 0;
-`;
-
-const CircleRight = Circle.extend`
-  top: -7px;
-  right: 0;
-`;
-
-const Line = styled.div`
-  height: 2px;
-  background-color: #00acde;
-  border-radius: 2px;
-`;
-
 export default () => {
   return (
     <DepartureTime>
@@ -130,11 +103,7 @@ export default () => {
             <Depart>до 23:45, 24 фев</Depart>
             <Comming>до 23:45, 24 фев</Comming>
           </Time>
-          <Range>
-            <CircleLeft />
-            <CircleRight />
-            <Line />
-          </Range>
+          <Range allowCross={false} defaultValue={[0, 100]} />
         </Info>
         <Info>
           <CommingTitle>Прибытие в Барселону:</CommingTitle>
@@ -142,11 +111,7 @@ export default () => {
             <Depart>c 00:05, 24 фев</Depart>
             <Comming>до 23:45, 24 фев</Comming>
           </Time>
-          <Range>
-            <CircleLeft />
-            <CircleRight />
-            <Line />
-          </Range>
+          <Range allowCross={false} defaultValue={[0, 100]} />
         </Info>
       </Flight>
       <Flight>
@@ -161,11 +126,7 @@ export default () => {
             <Depart>c 00:05, 24 фев</Depart>
             <Comming>до 23:45, 24 фев</Comming>
           </Time>
-          <Range>
-            <CircleLeft />
-            <CircleRight />
-            <Line />
-          </Range>
+          <Range allowCross={false} defaultValue={[0, 100]} />
         </Info>
         <Info>
           <CommingTitle>Прибытие в Москву:</CommingTitle>
@@ -173,11 +134,7 @@ export default () => {
             <Depart>c 00:05, 24 фев</Depart>
             <Comming>до 23:45, 24 фев</Comming>
           </Time>
-          <Range>
-            <CircleLeft />
-            <CircleRight />
-            <Line />
-          </Range>
+          <Range allowCross={false} defaultValue={[0, 100]} />
         </Info>
       </Flight>
     </DepartureTime>

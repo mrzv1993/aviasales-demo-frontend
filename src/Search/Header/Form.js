@@ -139,23 +139,3 @@ class Dropdown extends React.Component {
 }
 
 export default Dropdown;
-
-{
-  /*
-          
-            <Forward onClick={this.toggleOpen}>
-              <ButtonForward />
-              {this.state.isOpen && (
-                <Box>
-                  <DayPicker />
-                  <Toggle>Показать цены в одну сторону</Toggle>
-                </Box>
-              )}
-            </Forward>
-            <Reverse>
-              <ButtonReverse />
-            </Reverse>
-          </DateRange>
-
-*/
-}
