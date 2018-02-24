@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Header from "./Header";
@@ -27,7 +27,7 @@ const FilterButton = styled.button`
 
 const Search = () => (
   <div>
-    <FilterButton>Фильтровать</FilterButton>
+    <FilterButton type="button">Фильтровать</FilterButton>
     <Header />
     <Result />
   </div>

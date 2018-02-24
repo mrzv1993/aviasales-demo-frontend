@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import all from "./01-all.svg";
 import beach from "./02-beach.svg";
@@ -115,34 +115,34 @@ export default function() {
     <Category>
       <Nav>
         <Tab>
-          <All>
+          <All type="button">
             КУДА<br />УГОДНО
           </All>
         </Tab>
         <Tab>
-          <Beach>
+          <Beach type="button">
             Солнце<br />и море
           </Beach>
         </Tab>
         <Tab>
-          <Family>
+          <Family type="button">
             Шопинг,<br />город
           </Family>
         </Tab>
       </Nav>
       <Nav>
         <Tab>
-          <History>
+          <History type="button">
             Культура<br />и история
           </History>
         </Tab>
         <Tab>
-          <Nightlife>
+          <Nightlife type="button">
             Ночная<br />жизнь
           </Nightlife>
         </Tab>
         <Tab>
-          <Shopping>
+          <Shopping type="button">
             Отдых<br />с детьми
           </Shopping>
         </Tab>

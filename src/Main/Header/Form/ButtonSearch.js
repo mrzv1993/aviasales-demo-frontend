@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const ButtonSearch = styled.button`
@@ -14,15 +14,13 @@ const ButtonSearch = styled.button`
   border: none;
   width: 100%;
   height: 56px;
-  margin-top: 2px;
   font-size: 1rem;
 
   @media (min-width: 768px) {
-    margin-left: 4px;
     width: calc(100% - 2px);
   }
 `;
 
 export default function() {
-  return <ButtonSearch>Найти билеты</ButtonSearch>;
+  return <ButtonSearch type="button">Найти билеты</ButtonSearch>;
 }

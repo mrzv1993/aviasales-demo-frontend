@@ -1,11 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import arrows from "./arrows.svg";
 
-////
+const InputDepart = styled.input`
+  width: 100%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  padding-right: 2.5rem;
 
-const Input = styled.input`
   border: none;
   padding: 1.15rem 1rem 1.2rem 1rem;
   height: 56px;
@@ -13,13 +16,6 @@ const Input = styled.input`
     box-shadow: 0 0 0 2pt #ff9241;
     outline: none;
   }
-`;
-
-const InputDepart = Input.extend`
-  width: 100%;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  padding-right: 2.5rem;
 
   @media (min-width: 768px) {
     border-top-left-radius: 4px;
@@ -48,7 +44,7 @@ export default function() {
   return (
     <div>
       <InputDepart placeholder="Город вылета" />
-      <ButtonDepart />
+      <ButtonDepart type="button" />
     </div>
   );
 }

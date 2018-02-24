@@ -113,7 +113,7 @@ export default () => {
           <Label />
           <Txt>
             Популярные направления перелетов из города
-            <ChangeCity>
+            <ChangeCity type="button">
               {" "}
               Москва <img src={edit} alt="edit" />
             </ChangeCity>

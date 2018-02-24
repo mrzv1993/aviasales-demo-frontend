@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import calendar from "./calendar.svg";
 
-const Button = styled.button`
+const ButtonReverse = styled.button`
+  background-image: url(${calendar});
   padding: 1.15rem 1rem;
   background-color: #ffffff;
   background-repeat: no-repeat;
@@ -11,23 +12,17 @@ const Button = styled.button`
   border: none;
   width: 100%;
   height: 56px;
-  margin-top: 2px;
 
   font-size: 1rem;
 
   color: #a0b0b9;
   text-align: left;
-`;
-
-const ButtonReverse = Button.extend`
-  background-image: url(${calendar});
 
   @media (min-width: 768px) {
-    margin-left: 2px;
-    width: calc(100% - 2px);
+    width: 100%;
   }
 `;
 
 export default function() {
-  return <ButtonReverse>Обратно</ButtonReverse>;
+  return <ButtonReverse type="button">Обратно</ButtonReverse>;
 }

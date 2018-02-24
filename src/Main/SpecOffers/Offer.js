@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Offer = styled.section`
@@ -128,7 +128,7 @@ export default props => {
         </PriceInfo>
       </Info>
       <Description>{props.data.description}</Description>
-      <Button>Узнать подробности</Button>
+      <Button type="button">Узнать подробности</Button>
     </Offer>
   );
 };

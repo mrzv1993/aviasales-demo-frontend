@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -105,13 +105,13 @@ export default function() {
         <div className="col-xs-12">
           <NavBar>
             <Link to="/">
-              <PrevPage />
+              <PrevPage type="button" />
             </Link>
             <Flight>
               <Title>Москва — Барселона</Title>
               <Date>24 фев — 3 март, 1 пассажир</Date>
             </Flight>
-            <Value>Rub</Value>
+            <Value type="button">Rub</Value>
           </NavBar>
         </div>
       </div>
@@ -123,14 +123,14 @@ export default function() {
             </div>
             <div className="col-sm-6">
               <Value>RUB</Value>
-              <Message>
+              <Message type="button">
                 <img src={message} alt="Сообщение" />
               </Message>
-              <User>
+              <User type="button">
                 <Notification>1</Notification>
                 <img src={userImg} alt="Профиль" />
               </User>
-              <Menu>
+              <Menu type="button">
                 <img src={menu} alt="Меню" />
               </Menu>
             </div>

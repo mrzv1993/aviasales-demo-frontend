@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import DayPicker from "react-day-picker";
 import "react-day-picker/lib/style.css";
 import styled from "styled-components";
@@ -21,14 +21,16 @@ const Places = styled.div`
   }
   @media (min-width: 1200px) {
     display: inline-block;
-    width: 40%;
+    margin-right: 2px;
+    width: calc(30% - 2px);
   }
 `;
 
 const DateRange = styled.div`
   @media (min-width: 768px) {
     display: inline-block;
-    width: 50%;
+    margin-right: 2px;
+    width: calc(50% - 2px);
   }
 `;
 
@@ -36,10 +38,11 @@ const Service = styled.div`
   @media (min-width: 768px) {
     display: inline-block;
     width: 100%;
+    margin-top: 2px;
   }
   @media (min-width: 1200px) {
     display: inline-block;
-    width: 60%;
+    width: 70%;
   }
 `;
 
@@ -50,13 +53,12 @@ const Passenger = styled.div`
   }
 `;
 
-//  удалить
-
 const Depart = styled.div`
   position: relative;
   @media (min-width: 768px) {
     display: inline-block;
-    width: 50%;
+    margin-right: 2px;
+    width: calc(50% - 2px);
   }
 `;
 const Comming = styled.div`
@@ -67,9 +69,11 @@ const Comming = styled.div`
 `;
 
 const Forward = styled.div`
+  position: relative;
   @media (min-width: 768px) {
     display: inline-block;
-    width: 50%;
+    margin-right: 2px;
+    width: calc(50% - 2px);
   }
 `;
 
@@ -80,34 +84,70 @@ const Reverse = styled.div`
   }
 `;
 
-const Search = () => (
-  <Form>
-    <Places>
-      <Depart>
-        <InputDepart />
-      </Depart>
-      <Comming>
-        <InputComming />
-      </Comming>
-    </Places>
-    <Service>
-      <DateRange>
-        <Forward>
-          <ButtonForward />
-        </Forward>
-        <Reverse>
-          <ButtonReverse />
-        </Reverse>
-      </DateRange>
-      <Passenger>
-        <Forward>
-          <ButtonPassenger />
-        </Forward>
-        <Reverse>
-          <ButtonSearch />
-        </Reverse>
-      </Passenger>
-    </Service>
-  </Form>
-);
-export default Search;
+const Box = styled.div`
+  background: #fff;
+  position: absolute;
+  top: 0;
+  box-shadow: 0px 0px 8px rgba(74, 74, 74, 0.2),
+    0px 2px 4px rgba(74, 74, 74, 0.2);
+  border-radius: 2px;
+  z-index: 1;
+`;
+
+const Toggle = styled.div`
+  padding: 1rem;
+  font-size: 12px;
+  color: #4a4a4a;
+`;
+
+class Dropdown extends React.Component {
+  state = {
+    isOpen: false
+  };
+
+  toggleOpen = () => {
+    this.setState({ isOpen: true });
+  };
+
+  render() {
+    return (
+      <Form>
+        <Places>
+          <Depart>
+            <InputDepart />
+          </Depart>
+          <Comming>
+            <InputComming />
+          </Comming>
+        </Places>
+        <Service>
+          <DateRange>
+            <Forward onClick={this.toggleOpen}>
+              <ButtonForward />
+              {/*{this.state.isOpen &&
+             
+                <Box>
+                  <DayPicker />
+                  <Toggle>Показать цены в одну сторону</Toggle>
+                </Box>
+               } */}
+            </Forward>
+            <Reverse>
+              <ButtonReverse />
+            </Reverse>
+          </DateRange>
+          <Passenger>
+            <Forward>
+              <ButtonPassenger />
+            </Forward>
+            <Reverse>
+              <ButtonSearch />
+            </Reverse>
+          </Passenger>
+        </Service>
+      </Form>
+    );
+  }
+}
+
+export default Dropdown;

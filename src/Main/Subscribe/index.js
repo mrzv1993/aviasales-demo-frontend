@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import line from "../../assets/line.svg";
 
@@ -78,26 +78,26 @@ export default function() {
                 <div className="col-xl-3">
                   <Networks>
                     <Link href="#">
-                      <img src={tw} />
+                      <img src={tw} alt="twitter" />
                     </Link>
 
                     <Link href="#">
-                      <img src={fb} />
+                      <img src={fb} alt="facebookr" />
                     </Link>
 
                     <Link href="#">
-                      <img src={vk} />
+                      <img src={vk} alt="vkontakte" />
                     </Link>
 
                     <Link href="#">
-                      <img src={rss} />
+                      <img src={rss} alt="rss" />
                     </Link>
                   </Networks>
                 </div>
                 <div className="col-xl-4">
                   <Form>
                     <Input placeholder="Ваш Email" />
-                    <Button>Подписаться</Button>
+                    <Button type="button">Подписаться</Button>
                   </Form>
                 </div>
               </div>

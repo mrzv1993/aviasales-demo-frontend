@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 ////
@@ -15,10 +15,8 @@ const Input = styled.input`
 
 const InputComing = Input.extend`
   width: 100%;
-  margin-top: 2px;
 
   @media (min-width: 768px) {
-    margin-left: 2px;
     border-top-right-radius: 4px;
   }
   @media (min-width: 1200px) {

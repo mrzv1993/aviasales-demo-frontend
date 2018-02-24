@@ -138,12 +138,11 @@ const LeftTicket = styled.div`
 `;
 
 const PriceCarrier = styled.div`
-  display: flex;
   align-items: center;
   margin: 0.5rem 0;
+  display: flex;
 
   @media screen and (min-width: 768px) {
-    display: none;
     margin: 0;
   }
 `;
@@ -516,21 +515,21 @@ export default props => {
             <AirOffer>{props.card.offerAirSecond}</AirOffer>
             <PriceOffer>{props.card.offerPriceSecond}</PriceOffer>
           </Offer>
-          <ButtonOffer>{props.card.offerButton}</ButtonOffer>
+          <ButtonOffer type="button">{props.card.offerButton}</ButtonOffer>
         </Offers>
       </LeftColumn>
 
       <RightColumn>
         <PriceCarrier>
           <PriceContainer>
-            <Price>2415 р</Price>
+            <Price>{props.card.price}</Price>
           </PriceContainer>
           <AirLogoWrap>
             <AirLogo src={props.card.logo} />
           </AirLogoWrap>
           <BadgesAndShare>
-            <Badges>Чартер</Badges>
-            <Share />
+            <Badges type="button">Чартер</Badges>
+            <Share type="button" />
           </BadgesAndShare>
         </PriceCarrier>
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -27,32 +27,39 @@ const Places = styled.div`
   }
   @media (min-width: 1200px) {
     display: inline-block;
-    width: 40%;
+    width: calc(40% - 2px);
+    margin-right: 2px;
   }
 `;
 
 const DateRange = styled.div`
   @media (min-width: 768px) {
     display: inline-block;
-    width: 50%;
+    width: calc(50% - 2px);
+    margin-right: 2px;
   }
 `;
 
 const Service = styled.div`
+  margin-top: 2px;
+
   @media (min-width: 768px) {
     display: inline-block;
     width: 100%;
   }
   @media (min-width: 1200px) {
+    margin-top: 0;
     display: inline-block;
     width: 60%;
   }
 `;
 
 const Passenger = styled.div`
+  margin-top: 2px;
   @media (min-width: 768px) {
     display: inline-block;
     width: 50%;
+    margin-top: 0;
   }
 `;
 
@@ -60,11 +67,14 @@ const Depart = styled.div`
   position: relative;
   @media (min-width: 768px) {
     display: inline-block;
-    width: 50%;
+    width: calc(50% - 2px);
+    margin-right: 2px;
   }
 `;
 const Comming = styled.div`
+  margin-top: 2px;
   @media (min-width: 768px) {
+    margin-top: 0;
     display: inline-block;
     width: 50%;
   }
@@ -73,14 +83,18 @@ const Comming = styled.div`
 const Forward = styled.div`
   @media (min-width: 768px) {
     display: inline-block;
-    width: 50%;
+    width: calc(50% - 2px);
+    margin-right: 2px;
   }
 `;
 
 const Reverse = styled.div`
+  margin-top: 2px;
+
   @media (min-width: 768px) {
     display: inline-block;
     width: 50%;
+    margin-top: 0;
   }
 `;
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import arrow from "./arrow.svg";
@@ -75,7 +75,7 @@ export default function() {
                 Дешевые авиабилеты от крупнейших авиакомпаний и агентств
               </TitleName>
               <Sliders>
-                <ArrowPrev />
+                <ArrowPrev type="button" />
                 <SliderContent>
                   <AgencyLogo1 src={agencyLogo1} alt="" />
                   <AgencyLogo2 src={agencyLogo2} alt="" />
@@ -83,7 +83,7 @@ export default function() {
                   <AgencyLogo4 src={agencyLogo4} alt="" />
                   <AgencyLogo5 src={agencyLogo5} alt="" />
                 </SliderContent>
-                <ArrowNext />
+                <ArrowNext type="button" />
               </Sliders>
             </div>
           </div>

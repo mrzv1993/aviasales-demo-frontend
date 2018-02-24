@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import appStore from "./app-store.svg";
 import googlePlay from "./google-play.svg";
