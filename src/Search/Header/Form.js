@@ -1,6 +1,4 @@
 import React from "react";
-import DayPicker from "react-day-picker";
-import "react-day-picker/lib/style.css";
 import styled from "styled-components";
 
 import InputDepart from "../../Main/Header/Form/InputDepart";
@@ -9,6 +7,8 @@ import ButtonForward from "../../Main/Header/Form/ButtonForward";
 import ButtonReverse from "../../Main/Header/Form/ButtonReverse";
 import ButtonPassenger from "../../Main/Header/Form/ButtonPassenger";
 import ButtonSearch from "../../Main/Header/Form/ButtonSearch";
+
+import DatePicker from "./DatePicker";
 
 const Form = styled.form`
   padding: 2.5rem 0 2rem 0;
@@ -122,19 +122,7 @@ class Dropdown extends React.Component {
         </Places>
         <Service>
           <DateRange>
-            <Forward onClick={this.toggleOpen}>
-              <ButtonForward />
-              {/*{this.state.isOpen &&
-             
-                <Box>
-                  <DayPicker />
-                  <Toggle>Показать цены в одну сторону</Toggle>
-                </Box>
-               } */}
-            </Forward>
-            <Reverse>
-              <ButtonReverse />
-            </Reverse>
+            <DatePicker />
           </DateRange>
           <Passenger>
             <Forward>
@@ -151,3 +139,23 @@ class Dropdown extends React.Component {
 }
 
 export default Dropdown;
+
+{
+  /*
+          
+            <Forward onClick={this.toggleOpen}>
+              <ButtonForward />
+              {this.state.isOpen && (
+                <Box>
+                  <DayPicker />
+                  <Toggle>Показать цены в одну сторону</Toggle>
+                </Box>
+              )}
+            </Forward>
+            <Reverse>
+              <ButtonReverse />
+            </Reverse>
+          </DateRange>
+
+*/
+}
