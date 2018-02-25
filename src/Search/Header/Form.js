@@ -8,7 +8,7 @@ import ButtonReverse from "../../Main/Header/Form/ButtonReverse";
 import ButtonPassenger from "../../Main/Header/Form/ButtonPassenger";
 import ButtonSearch from "../../Main/Header/Form/ButtonSearch";
 
-import DatePicker from "./DatePicker";
+import DatePicker from "../../Main/Header/Form/DatePicker";
 
 const Form = styled.form`
   padding: 2.5rem 0 2rem 0;

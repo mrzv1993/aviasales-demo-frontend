@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import InputDepart from "./InputDepart";
 import InputComming from "./InputComming";
-import ButtonForward from "./ButtonForward";
-import ButtonReverse from "./ButtonReverse";
+
 import ButtonPassenger from "./ButtonPassenger";
 import ButtonSearch from "./ButtonSearch";
+import DatePicker from "./DatePicker";
 
 const Form = styled.form`
     margin: 1.5rem auto 0 auto;
@@ -121,12 +121,7 @@ export default function() {
       </Places>
       <Service>
         <DateRange>
-          <Forward>
-            <ButtonForward />
-          </Forward>
-          <Reverse>
-            <ButtonReverse />
-          </Reverse>
+          <DatePicker />
         </DateRange>
         <Passenger>
           <ButtonPassenger />

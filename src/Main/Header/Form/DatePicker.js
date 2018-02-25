@@ -7,7 +7,7 @@ import ruLocale from "date-fns/locale/ru";
 import { withClickOutside } from "react-clickoutside";
 import "./datepicker.css";
 
-import calendar from "../../Main/Header/Form/calendar.svg";
+import calendar from "./calendar.svg";
 import CheckOneDirection from "./CheckOneDirection";
 
 const DateSelect = styled.div`
@@ -74,6 +74,7 @@ const Picker = styled.div`
 
 const Departures = InputWrapper.extend`
   position: relative;
+  margin-right: 2px;
   @media (min-width: 768px) {
     border-bottom-left-radius: 4px;
     margin-right: 2px;
