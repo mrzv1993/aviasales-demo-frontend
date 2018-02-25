@@ -373,9 +373,10 @@ const Count = styled.p`
   font-style: normal;
   font-weight: normal;
   line-height: 18px;
-  font-size: 14px;
-  margin: 0;
-  color: #4a4a4a;
+  font-size: 12px;
+  text-align: center;
+
+  color: #a0b0b9;
 `;
 
 const All = styled.span`
@@ -386,9 +387,10 @@ const All = styled.span`
     font-style: normal;
     font-weight: normal;
     line-height: 18px;
-    font-size: 14px;
+    font-size: 12px;
+    text-align: center;
 
-    color: #4a4a4a;
+    color: #a0b0b9;
   }
 `;
 

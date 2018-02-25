@@ -5,7 +5,7 @@ import arrow from "./arrow.svg";
 import clear from "./clear.svg";
 
 const Transfer = styled.div`
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.5rem;
 `;
 
 const Title = styled.h2`
@@ -21,6 +21,7 @@ const Title = styled.h2`
 
 const Arrow = styled.img`
   margin-right: 0.5rem;
+  margin-left: 0.5rem;
 `;
 
 const Clear = styled.img`
@@ -28,16 +29,31 @@ const Clear = styled.img`
   right: 0;
 `;
 
-const Checkboxes = styled.div``;
+const Checkboxes = styled.div`
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-top: 1rem;
+`;
+
+const CheckboxWrap = styled.label`
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 0.5rem;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #f3fbff;
+  }
+`;
 
 const CheckboxItem = styled.div`
   display: flex;
-  flex-flow: row;
-  justify-content: space-between;
+  width: 100%;
   align-items: center;
-  padding: 0.5rem 0;
-  font-size: 0.75rem;
-  color: #4a4a4a;
+  justify-content: space-between;
+  cursor: pointer;
 `;
 
 const All = CheckboxItem.extend``;
@@ -50,17 +66,15 @@ const TwoTransfer = CheckboxItem.extend``;
 
 const ThreeTransfer = CheckboxItem.extend``;
 
-const Checkbox = styled.label`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 12px;
-  color: #4a4a4a;
-  cursor: pointer;
-`;
-
 const Check = styled.input`
   margin-right: 0.5rem;
+`;
+
+const TransferName = styled.p`
+  margin: 0;
+  padding: 0.75rem 0;
+  font-size: 12px;
+  color: #4a4a4a;
 `;
 
 const Price = styled.p`
@@ -78,44 +92,44 @@ export default () => {
       </Title>
 
       <Checkboxes>
-        <Checkbox>
+        <CheckboxWrap>
+          <Check type="checkbox" value="Все" />
           <All>
-            <Check type="checkbox" value="Все" />
-            Все
+            <TransferName>Все</TransferName>
           </All>
-        </Checkbox>
+        </CheckboxWrap>
 
-        <Checkbox>
+        <CheckboxWrap>
+          <Check type="checkbox" value="Без пересадок" />
           <WhitoutTransfer>
-            <Check type="checkbox" value="Без пересадок" />
-            Без пересадок
+            <TransferName>Без пересадок</TransferName>
+            <Price>7 712 ₽</Price>
           </WhitoutTransfer>
-          <Price>7 712 ₽</Price>
-        </Checkbox>
+        </CheckboxWrap>
 
-        <Checkbox>
+        <CheckboxWrap>
+          <Check type="checkbox" value="Одна пересадка" />
           <OneTransfer>
-            <Check type="checkbox" value="Одна пересадка" />
-            Одна пересадка
+            <TransferName>Одна пересадка</TransferName>
+            <Price>11 150 ₽</Price>
           </OneTransfer>
-          <Price>11 150 ₽</Price>
-        </Checkbox>
+        </CheckboxWrap>
 
-        <Checkbox>
+        <CheckboxWrap>
+          <Check type="checkbox" value="Две пересадки" />
           <TwoTransfer>
-            <Check type="checkbox" value="Две пересадки" />
-            Две пересадки
+            <TransferName> Две пересадки</TransferName>
+            <Price>16 821 ₽</Price>
           </TwoTransfer>
-          <Price>16 821 ₽</Price>
-        </Checkbox>
+        </CheckboxWrap>
 
-        <Checkbox>
+        <CheckboxWrap>
+          <Check type="checkbox" value="Три пересадки" />
           <ThreeTransfer>
-            <Check type="checkbox" value="Три пересадки" />
-            Три пересадки
+            <TransferName>Три пересадки</TransferName>
+            <Price>16 821 ₽</Price>
           </ThreeTransfer>
-          <Price>23 986 ₽</Price>
-        </Checkbox>
+        </CheckboxWrap>
       </Checkboxes>
     </Transfer>
   );

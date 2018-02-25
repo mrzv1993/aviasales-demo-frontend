@@ -3,8 +3,6 @@ import styled from "styled-components";
 
 import InputDepart from "../../Main/Header/Form/InputDepart";
 import InputComming from "../../Main/Header/Form/InputComming";
-import ButtonForward from "../../Main/Header/Form/ButtonForward";
-import ButtonReverse from "../../Main/Header/Form/ButtonReverse";
 import ButtonPassenger from "../../Main/Header/Form/ButtonPassenger";
 import ButtonSearch from "../../Main/Header/Form/ButtonSearch";
 
@@ -82,22 +80,6 @@ const Reverse = styled.div`
     display: inline-block;
     width: 50%;
   }
-`;
-
-const Box = styled.div`
-  background: #fff;
-  position: absolute;
-  top: 0;
-  box-shadow: 0px 0px 8px rgba(74, 74, 74, 0.2),
-    0px 2px 4px rgba(74, 74, 74, 0.2);
-  border-radius: 2px;
-  z-index: 1;
-`;
-
-const Toggle = styled.div`
-  padding: 1rem;
-  font-size: 12px;
-  color: #4a4a4a;
 `;
 
 class Dropdown extends React.Component {
