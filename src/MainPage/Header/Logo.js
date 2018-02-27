@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import logo from "../../logo.svg";
 
-const Logo = styled.div`
+const Logo = styled(Link)`
   display: flex;
   margin-top: 0.75rem;
+  text-decoration: none;
 `;
 
 const LogoImg = styled.img`
@@ -28,7 +29,7 @@ const LogoText = styled.span`
 
 export default function() {
   return (
-    <Logo>
+    <Logo to="/">
       <LogoImg src={logo} alt="Aviasales" title="Aviasales" />
       <LogoText>aviasales</LogoText>
     </Logo>
