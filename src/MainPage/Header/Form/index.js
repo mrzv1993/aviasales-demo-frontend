@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import airplane from "./airplane.svg";
+
 import InputDepart from "./InputDepart";
 import InputComming from "./InputComming";
 
 import ButtonPassenger from "./ButtonPassenger";
-import ButtonSearch from "./ButtonSearch";
 import DatePicker from "./DatePicker";
 
 const Form = styled.form`
@@ -95,6 +96,41 @@ const SearchBtn = styled.div`
   }
 `;
 
+const ButtonSearch = styled(Link)`
+  padding: 1rem 1rem;
+  background-color: #ff9241;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 28px;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  text-decoration: none;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    width: calc(100% - 2px);
+    max-width: 312px;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: 3rem;
+  }
+
+  &:hover {
+    background-color: #ff9d54;
+  }
+`;
+
+const Airpalne = styled.img`
+  height: 24px;
+  margin-left: 0.75rem;
+`;
+
 export default function() {
   return (
     <Form>
@@ -115,9 +151,10 @@ export default function() {
         </Passenger>
       </Service>
       <SearchBtn>
-        <Link to="/search">
-          <ButtonSearch />
-        </Link>
+        <ButtonSearch to="/search">
+          Найти билеты
+          <Airpalne src={airplane} alt="airplane" />
+        </ButtonSearch>
       </SearchBtn>
     </Form>
   );

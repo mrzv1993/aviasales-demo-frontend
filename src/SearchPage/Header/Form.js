@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import InputDepart from "../../Main/Header/Form/InputDepart";
-import InputComming from "../../Main/Header/Form/InputComming";
-import ButtonPassenger from "../../Main/Header/Form/ButtonPassenger";
-import ButtonSearch from "../../Main/Header/Form/ButtonSearch";
+import InputDepart from "../../MainPage/Header/Form/InputDepart";
+import InputComming from "../../MainPage/Header/Form/InputComming";
+import ButtonPassenger from "../../MainPage/Header/Form/ButtonPassenger";
 
-import DatePicker from "../../Main/Header/Form/DatePicker";
+import DatePicker from "../../MainPage/Header/Form/DatePicker";
 
 const Form = styled.form`
   padding: 2.5rem 0 2rem 0;
@@ -110,9 +109,7 @@ class Dropdown extends React.Component {
             <Forward>
               <ButtonPassenger />
             </Forward>
-            <Reverse>
-              <ButtonSearch />
-            </Reverse>
+            <Reverse />
           </Passenger>
         </Service>
       </Form>

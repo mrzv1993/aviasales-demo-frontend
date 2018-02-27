@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Footer from "./Footer";
 
-import Main from "./Main";
-import Search from "./Search";
+import MainPage from "./MainPage";
+import SearchPage from "./SearchPage";
 
 const Page = styled.div`
   min-width: 320px;
@@ -14,9 +14,9 @@ const Page = styled.div`
 const App = () => (
   <Router>
     <Page>
-      <Route exact path="/" component={Main} />
-      <Route path="/search" component={Search} />
-      {/*<Footer />*/}
+      <Route exact path="/" component={MainPage} />
+      <Route path="/search" component={SearchPage} />
+      <Footer />
     </Page>
   </Router>
 );

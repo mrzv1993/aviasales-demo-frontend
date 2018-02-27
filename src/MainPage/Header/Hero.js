@@ -6,17 +6,16 @@ import Form from "./Form";
 const Hero = styled.div`
   display: flex;
   flex-direction: column;
-  height: 90vh;
-
+  height: calc(100vh - 40px);
   justify-content: center;
 `;
 
 const Title = styled.h1`
+  margin: 0;
   color: #ffffff;
   text-align: center;
   font-weight: bold;
   font-size: 1.25rem;
-  margin: 0;
 
   @media (min-width: 768px) {
     font-size: 2rem;
@@ -28,12 +27,12 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.h2`
-  font-weight: bold;
-  text-align: center;
-  color: #ffffff;
   display: none;
   margin: 0;
   margin-top: 0.5rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
 
   @media (min-width: 768px) {
     display: block;

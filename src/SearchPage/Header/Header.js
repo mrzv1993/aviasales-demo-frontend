@@ -7,7 +7,7 @@ import menu from "./menu.svg";
 import message from "./message.svg";
 import userImg from "./user-img.svg";
 
-import Logo from "../../Main/Header/Logo";
+import Logo from "../../MainPage/Header/Logo";
 
 const Header = styled.div``;
 
