@@ -33,7 +33,7 @@ const SubTitle = styled.h2`
   color: #ffffff;
   display: none;
   margin: 0;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 
   @media (min-width: 768px) {
     display: block;

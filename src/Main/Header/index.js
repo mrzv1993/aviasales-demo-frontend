@@ -11,7 +11,6 @@ const Head = styled.header`
 
 const Header = styled.div`
   display: flex;
-  padding: 0.75rem 0;
   align-items: center;
 `;
 

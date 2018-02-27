@@ -16,7 +16,7 @@ const App = () => (
     <Page>
       <Route exact path="/" component={Main} />
       <Route path="/search" component={Search} />
-      <Footer />
+      {/*<Footer />*/}
     </Page>
   </Router>
 );

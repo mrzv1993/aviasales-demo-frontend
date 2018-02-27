@@ -10,12 +10,12 @@ import ButtonSearch from "./ButtonSearch";
 import DatePicker from "./DatePicker";
 
 const Form = styled.form`
-    margin: 1.5rem auto 0 auto;
+    margin: 0 auto;
     width: 100%;
+    margin-top: 1rem;
   
-
     @media (min-width: 768px) {
-        margin-top: 2.5rem;
+      margin-top: 2.5rem;
     }
 }
 `;
@@ -38,6 +38,23 @@ const DateRange = styled.div`
     width: calc(50% - 2px);
     margin-right: 2px;
   }
+  @media (min-width: 1200px) {
+    width: calc(60% - 2px);
+  }
+`;
+
+const Passenger = styled.div`
+  margin-top: 2px;
+  @media (min-width: 768px) {
+    display: inline-block;
+    width: 50%;
+    margin-top: 0;
+  }
+  @media (min-width: 1200px) {
+    display: inline-block;
+    width: 40%;
+    margin-top: 0;
+  }
 `;
 
 const Service = styled.div`
@@ -51,15 +68,6 @@ const Service = styled.div`
     margin-top: 0;
     display: inline-block;
     width: 60%;
-  }
-`;
-
-const Passenger = styled.div`
-  margin-top: 2px;
-  @media (min-width: 768px) {
-    display: inline-block;
-    width: 50%;
-    margin-top: 0;
   }
 `;
 
@@ -80,29 +88,8 @@ const Comming = styled.div`
   }
 `;
 
-const Forward = styled.div`
-  @media (min-width: 768px) {
-    display: inline-block;
-    width: calc(50% - 2px);
-    margin-right: 2px;
-  }
-`;
-
-const Reverse = styled.div`
-  margin-top: 2px;
-
-  @media (min-width: 768px) {
-    display: inline-block;
-    width: 50%;
-    margin-top: 0;
-  }
-`;
-
 const SearchBtn = styled.div`
-  margin-top: 1rem;
-
   @media (min-width: 768px) {
-    margin-top: 3rem;
     display: inline-block;
     width: 50%;
   }

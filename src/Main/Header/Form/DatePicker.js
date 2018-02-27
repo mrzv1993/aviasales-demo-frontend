@@ -15,7 +15,7 @@ const DateSelect = styled.div`
   flex-basis: 50%;
 `;
 const CalendarImg = styled.img`
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 `;
 
 const Input = styled.input`

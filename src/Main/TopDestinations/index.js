@@ -62,12 +62,15 @@ const cards = [
   }
 ];
 
-const Title = styled.div`
-  padding-top: 2.5rem;
+const TopDestinations = styled.section`
+  background: #f8fcff;
+`;
+
+const TitleWrap = styled.div`
   text-align: center;
   min-width: 312px;
   @media (min-width: 768px) {
-    padding-top: 4rem;
+    padding-top: 0rem;
   }
 `;
 
@@ -78,14 +81,12 @@ const Label = styled.div`
   height: 64px;
 `;
 
-const Txt = styled.h2`
+const Title = styled.h2`
   font-weight: 500;
   line-height: 1.125rem;
   font-size: 1.125rem
-  margin-top: 1.5rem;
   color: #4a4a4a;
   @media (min-width: 768px) {
-    margin-top: 2.5rem;
     font-size: 1.5rem;
   }
 `;
@@ -99,26 +100,20 @@ const ChangeCity = styled.button`
   }
 `;
 
-const Section = styled.section`
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background: #f8fcff;
-`;
-
 export default () => {
   return (
-    <Section>
+    <TopDestinations>
       <div className="container">
-        <Title>
+        <TitleWrap>
           <Label />
-          <Txt>
+          <Title>
             Популярные направления перелетов из города
             <ChangeCity type="button">
               {" "}
               Москва <img src={edit} alt="edit" />
             </ChangeCity>
-          </Txt>
-        </Title>
+          </Title>
+        </TitleWrap>
 
         <div className="row">
           <div className="col-xl-8 col-xl-offset-2 col-md-10 col-md-offset-1 col-xs-12">
@@ -147,6 +142,6 @@ export default () => {
           </div>
         </div>
       </div>
-    </Section>
+    </TopDestinations>
   );
 };

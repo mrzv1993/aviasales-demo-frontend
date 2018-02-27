@@ -4,6 +4,7 @@ import styled from "styled-components";
 import logo from "../../logo.svg";
 
 const Logo = styled.div`
+  margin-top: 0.75rem;
   display: flex;
 `;
 
@@ -11,7 +12,7 @@ const LogoImg = styled.img`
   width: 2rem;
 `;
 
-const Txt = styled.span`
+const LogoText = styled.span`
   display: none;
   margin-left: 0.75rem;
   font-weight: 300;
@@ -26,7 +27,7 @@ export default function() {
   return (
     <Logo>
       <LogoImg src={logo} alt="Aviasales" title="Aviasales" />
-      <Txt>aviasales</Txt>
+      <LogoText>aviasales</LogoText>
     </Logo>
   );
 }
