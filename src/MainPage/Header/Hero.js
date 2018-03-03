@@ -50,7 +50,7 @@ export default function() {
       <Title>Поиск дешевых авиабилетов</Title>
       <SubTitle>Лучший способ купить авиабилеты дешево</SubTitle>
       <div className="row center-md">
-        <div className="col-md-10">
+        <div className="col-md-12">
           <Form />
         </div>
       </div>

@@ -12,13 +12,13 @@ const BestPrice = styled.section`
 
 // Тайтл начало
 
-const SectionTitle = styled.div`
+const TitleWrap = styled.div`
   padding-top: 2.5rem;
   text-align: center;
   min-width: 312px;
 
   @media (min-width: 768px) {
-    padding-top: 4rem;
+    padding-top: 4.5rem;
   }
 `;
 
@@ -30,15 +30,14 @@ const Label = styled.div`
   height: 64px;
 `;
 
-const Txt = styled.h2`
+const Title = styled.h2`
   font-weight: 500;
   line-height: 1.125rem;
-  font-size: 1.125rem
-  margin-top: 1.5rem;
+  font-size: 1.125rem;
   color: #4a4a4a;
+  margin-top: 1.5rem;
 
   @media (min-width: 768px) {
-    margin-top: 2.5rem;
     font-size: 1.5rem;
   }
 `;
@@ -61,7 +60,7 @@ const PopularDirectLast = PopularDirect.extend`
   }
 `;
 
-const ListHeader = styled.div`
+const Direct = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -108,11 +107,13 @@ const List = styled.ul`
   }
 `;
 
-const ListItem = styled.li`
-  padding: 1rem 0;
-  margin-left: -2.5rem;
+const DepartureCity = styled.li`
   font-size: 1rem;
   color: #4a4a4a;
+
+  &:hover {
+    background-color: #e6f6fe;
+  }
 `;
 
 const Price = styled.span`
@@ -147,100 +148,98 @@ export default function() {
   return (
     <BestPrice>
       <div className="container">
-        <SectionTitle>
+        <TitleWrap>
           <Label />
-          <Txt>Лучшие цены на авиабилеты за последний месяц</Txt>
-        </SectionTitle>
+          <Title>Лучшие цены на авиабилеты за последний месяц</Title>
+        </TitleWrap>
+
         <div className="row">
-          <div className="col-xl-10 col-xl-offset-1 col-md-10 col-md-offset-1">
-            <div className="row">
-              <div className="col-xs-12 col-xl-4">
-                <PopularDirect>
-                  <ListHeader>
-                    <Flag src={flagRu} alt="Россия" />
-                    <CityCountry>
-                      <City>Симферополь (Крым)</City>
-                      <Country>Россия</Country>
-                    </CityCountry>
-                  </ListHeader>
-                  <List>
-                    <ListItem>
-                      Из Москвы <Price>от 4 813 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Санкт-Петербурга<Price>от 7 857 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Новосибирска<Price>от 15 127 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Екатеринбурга<Price>от 9 275 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Челябинска<Price>от 9 148 ₽</Price>
-                    </ListItem>
-                  </List>
-                </PopularDirect>
-              </div>
-              <div className="col-xs-12 col-xl-4">
-                <PopularDirect>
-                  <ListHeader>
-                    <Flag src={flagMol} alt="Молдавия" />
-                    <CityCountry>
-                      <City>Кишинёв</City>
-                      <Country>Молдавия</Country>
-                    </CityCountry>
-                  </ListHeader>
-                  <List>
-                    <ListItem>
-                      Из Москвы <Price>от 4 813 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Санкт-Петербурга<Price>от 7 857 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Краснодара<Price>от 15 127 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Сургута<Price>от 9 275 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Нового Уренгоя<Price>от 9 148 ₽</Price>
-                    </ListItem>
-                  </List>
-                </PopularDirect>
-              </div>
-              <div className="col-xs-12 col-xl-4">
-                <PopularDirectLast>
-                  <ListHeader>
-                    <Flag src={flagArm} alt="Армения" />
-                    <CityCountry>
-                      <City>Ереван</City>
-                      <Country>Армения</Country>
-                    </CityCountry>
-                  </ListHeader>
-                  <List>
-                    <ListItem>
-                      Из Москвы <Price>от 4 813 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Санкт-Петербурга<Price>от 7 857 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Сургута<Price>от 16 277 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Краснодара<Price>от 11 741 ₽</Price>
-                    </ListItem>
-                    <ListItem>
-                      Из Нового Уренгоя<Price>от 15 987 ₽</Price>
-                    </ListItem>
-                  </List>
-                </PopularDirectLast>
-              </div>
-            </div>
+          <div className="col-xs-12 col-xl-4">
+            <PopularDirect>
+              <Direct>
+                <Flag src={flagRu} alt="Россия" />
+                <CityCountry>
+                  <City>Симферополь (Крым)</City>
+                  <Country>Россия</Country>
+                </CityCountry>
+              </Direct>
+              <List>
+                <DepartureCity>
+                  Из Москвы <Price>от 4 813 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Санкт-Петербурга<Price>от 7 857 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Новосибирска<Price>от 15 127 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Екатеринбурга<Price>от 9 275 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Челябинска<Price>от 9 148 ₽</Price>
+                </DepartureCity>
+              </List>
+            </PopularDirect>
+          </div>
+          <div className="col-xs-12 col-xl-4">
+            <PopularDirect>
+              <Direct>
+                <Flag src={flagMol} alt="Молдавия" />
+                <CityCountry>
+                  <City>Кишинёв</City>
+                  <Country>Молдавия</Country>
+                </CityCountry>
+              </Direct>
+              <List>
+                <DepartureCity>
+                  Из Москвы <Price>от 4 813 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Санкт-Петербурга<Price>от 7 857 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Краснодара<Price>от 15 127 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Сургута<Price>от 9 275 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Нового Уренгоя<Price>от 9 148 ₽</Price>
+                </DepartureCity>
+              </List>
+            </PopularDirect>
+          </div>
+          <div className="col-xs-12 col-xl-4">
+            <PopularDirectLast>
+              <Direct>
+                <Flag src={flagArm} alt="Армения" />
+                <CityCountry>
+                  <City>Ереван</City>
+                  <Country>Армения</Country>
+                </CityCountry>
+              </Direct>
+              <List>
+                <DepartureCity>
+                  Из Москвы <Price>от 4 813 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Санкт-Петербурга<Price>от 7 857 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Сургута<Price>от 16 277 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Краснодара<Price>от 11 741 ₽</Price>
+                </DepartureCity>
+                <DepartureCity>
+                  Из Нового Уренгоя<Price>от 15 987 ₽</Price>
+                </DepartureCity>
+              </List>
+            </PopularDirectLast>
           </div>
         </div>
+
         <div className="row center-md center-xl">
           <div className="col-xs-12 col-md-10 col-xl-6">
             <FirstNote>

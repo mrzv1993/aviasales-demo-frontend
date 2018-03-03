@@ -11,10 +11,10 @@ import ButtonPassenger from "./ButtonPassenger";
 import DatePicker from "./DatePicker";
 
 const Form = styled.form`
-    margin: 0 auto;
-    width: 100%;
-    margin-top: 1rem;
-  
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 1rem;
+
     @media (min-width: 768px) {
       margin-top: 2.5rem;
     }
@@ -65,6 +65,7 @@ const Service = styled.div`
     display: inline-block;
     width: 100%;
   }
+
   @media (min-width: 1200px) {
     margin-top: 0;
     display: inline-block;
@@ -82,6 +83,7 @@ const Depart = styled.div`
 `;
 const Comming = styled.div`
   margin-top: 2px;
+
   @media (min-width: 768px) {
     margin-top: 0;
     display: inline-block;
@@ -90,45 +92,61 @@ const Comming = styled.div`
 `;
 
 const SearchBtn = styled.div`
-  @media (min-width: 768px) {
-    display: inline-block;
-    width: 50%;
-  }
-`;
-
-const ButtonSearch = styled(Link)`
-  padding: 1rem 1rem;
-  background-color: #ff9241;
-  border-radius: 4px;
-  font-weight: 900;
-  font-size: 28px;
-  color: #ffffff;
-  border: none;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
-  text-decoration: none;
-  text-align: center;
 
   @media (min-width: 768px) {
-    width: calc(100% - 2px);
-    max-width: 312px;
     margin-top: 2rem;
   }
 
   @media (min-width: 1200px) {
-    margin-top: 3rem;
-  }
-
-  &:hover {
-    background-color: #ff9d54;
+    margin-top: 2rem;
   }
 `;
 
+const ButtonSearch = styled(Link)`
+  background-color: #ff9241;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.5s;
+
+  @media (min-width: 768px) {
+    max-width: 312px;
+  }
+
+  &:hover {
+    background-color: #ffa059;
+  }
+`;
+
+const InnerWrap = styled.div`
+  position: relative;
+  padding: 1rem 0;
+  padding-right: 4rem;
+`;
+
+const Text = styled.p`
+  white-space: nowrap;
+  font-weight: 900;
+  line-height: normal;
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0;
+`;
+
 const Airpalne = styled.img`
-  height: 24px;
-  margin-left: 0.75rem;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 0.5rem;
+  transition: right 0.75s;
+
+  ${ButtonSearch}:hover & {
+    right: 0;
+  }
 `;
 
 export default function() {
@@ -152,8 +170,10 @@ export default function() {
       </Service>
       <SearchBtn>
         <ButtonSearch to="/search">
-          Найти билеты
-          <Airpalne src={airplane} alt="airplane" />
+          <InnerWrap>
+            <Text>Найти билеты</Text>
+            <Airpalne src={airplane} alt="airplane" />
+          </InnerWrap>
         </ButtonSearch>
       </SearchBtn>
     </Form>

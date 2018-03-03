@@ -3,23 +3,19 @@ import styled from "styled-components";
 
 const Card = styled.a`
   display: block;
-  margin-top: 12px;
   background-color: #fff;
   box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12);
   border-radius: 8px;
   transition: 0.3s ease-in-out;
   text-decoration: none;
+  margin-top: 1rem;
 
   :hover {
     box-shadow: 0 10px 20px 0 rgba(91, 137, 163, 0.2);
   }
 
   @media (min-width: 768px) {
-    margin-top: 24px;
-  }
-
-  @media (min-width: 1200px) {
-    margin-top: 32px;
+    margin-top: 1.5rem;
   }
 `;
 
@@ -43,11 +39,9 @@ const Info = styled.div`
   padding: 16px;
 
   @media (min-width: 768px) {
-    padding-top: 12px;
   }
 
   @media (min-width: 768px) {
-    padding-right: 24px;
   }
 `;
 

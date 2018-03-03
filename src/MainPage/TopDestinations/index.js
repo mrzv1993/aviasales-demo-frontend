@@ -68,9 +68,10 @@ const TopDestinations = styled.section`
 
 const TitleWrap = styled.div`
   text-align: center;
-  min-width: 312px;
+  padding-top: 2.5rem;
+
   @media (min-width: 768px) {
-    padding-top: 0rem;
+    padding-top: 3.5rem;
   }
 `;
 
@@ -84,8 +85,11 @@ const Label = styled.div`
 const Title = styled.h2`
   font-weight: 500;
   line-height: 1.125rem;
-  font-size: 1.125rem
+  font-size: 1.125rem;
+  margin: 0;
   color: #4a4a4a;
+  margin-top: 1.5rem;
+
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
@@ -107,7 +111,7 @@ export default () => {
         <TitleWrap>
           <Label />
           <Title>
-            Популярные направления перелетов из города
+            Популярные направления перелетов из&nbsp;города
             <ChangeCity type="button">
               {" "}
               Москва <img src={edit} alt="edit" />
@@ -122,22 +126,22 @@ export default () => {
         </div>
 
         <div className="row center-md">
-          <div className="col-xs-12 col-md-10 col-lg-5">
+          <div className="col-xs-12 col-lg-6">
             <Card card={cards[0]} />
           </div>
-          <div className="col-xs-12 col-md-10 col-lg-5">
+          <div className="col-xs-12 col-lg-6">
             <Card card={cards[1]} />
           </div>
-          <div className="col-xs-12 col-md-10 col-lg-5">
+          <div className="col-xs-12 col-lg-6">
             <Card card={cards[2]} />
           </div>
-          <div className="col-xs-12 col-md-10 col-lg-5">
+          <div className="col-xs-12 col-lg-6">
             <Card card={cards[3]} />
           </div>
-          <div className="col-xs-12 col-md-10 col-lg-5">
+          <div className="col-xs-12 col-lg-6">
             <Card card={cards[4]} />
           </div>
-          <div className="col-xs-12 col-md-10 col-lg-5">
+          <div className="col-xs-12 col-lg-6">
             <Card card={cards[5]} />
           </div>
         </div>

@@ -10,9 +10,10 @@ import shopping from "./06-shopping.svg";
 const Category = styled.div`
   width: 100%;
   margin-top: 2rem;
+  margin-bottom: 1.5rem;
 
   @media (min-width: 768px) {
-    margin-top: 2.5rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -26,7 +27,9 @@ const Nav = styled.div`
   }
 
   &:last-child {
-    margin-top: 2rem;
+     {
+      margin-top: 1.5rem;
+    }
   }
 `;
 
@@ -67,7 +70,7 @@ const Button = styled.button`
   }
 
   &:hover {
-    color: #5c5c5c;
+    color: #ff9241;
   }
 `;
 
