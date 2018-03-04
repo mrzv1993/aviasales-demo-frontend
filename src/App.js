@@ -1,35 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
-import Header from "./Header";
-import Directions from "./Directions";
-import BestPrice from "./BestPrice";
-import Slider from "./Slider";
-import Subscribe from "./Subscribe";
-import SpecOffers from "./SpecOffers";
-import MainArticles from "./MainArticles";
-import DownloadApp from "./DownloadApp";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import Footer from "./Footer";
+
+import MainPage from "./MainPage";
+import SearchPage from "./SearchPage";
 
 const Page = styled.div`
   min-width: 320px;
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <Page>
-        <Header />
-        <Directions />
-        <BestPrice />
-        <Slider />
-        <Subscribe />
-        <SpecOffers />
-        <MainArticles />
-        <DownloadApp />
-        <Footer />
-      </Page>
-    );
-  }
-}
-
+const App = () => (
+  <Router>
+    <Page>
+      <Route exact path="/" component={MainPage} />
+      <Route path="/search" component={SearchPage} />
+      <Footer />
+    </Page>
+  </Router>
+);
 export default App;
